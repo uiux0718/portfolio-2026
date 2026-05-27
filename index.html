@@ -9,12 +9,56 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
     />
     <link rel="stylesheet" href="style.css" />
+    
+    <style>
+      /* 01. 작심농장 전용 스타일 (시그니처: 보라색 #7C6DFF) */
+      .hover-jaksim .btn-link {
+        color: #1c1c1e !important;
+        border-bottom: 2px solid #ddd !important;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .hover-jaksim .btn-link:hover {
+        color: #7C6DFF !important;
+        border-bottom-color: #7C6DFF !important;
+      }
+
+      /* 02. KI ENTERTAINMENT 전용 스타일 (시그니처: 네온 그린 #39FF14) */
+      .hover-ki .btn-link {
+        color: #1c1c1e !important;
+        border-bottom: 2px solid #ddd !important;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .hover-ki .btn-link:hover {
+        color: #39FF14 !important;
+        border-bottom-color: #39FF14 !important;
+      }
+
+      /* 03. 무드바이트 전용 스타일 (시그니처: 노란색 #FFCC00) */
+      .hover-mood {
+        transition: all 0.3s ease;
+      }
+      .hover-mood:hover {
+        border-color: #FFCC00 !important;
+        box-shadow: 0 10px 25px rgba(255, 204, 0, 0.15) !important;
+      }
+      .hover-mood .btn-link {
+        color: #1c1c1e !important;
+        border-bottom: 2px solid #ddd !important;
+        transition: all 0.3s ease;
+      }
+      .hover-mood:hover .btn-link {
+        color: #FFCC00 !important;
+        border-bottom-color: #FFCC00 !important;
+      }
+    </style>
   </head>
 
   <body>
     <header class="navbar">
       <div class="container nav-flex">
-        <div class="logo">MAGAZINE Y.</div>
+        <div class="logo">MAGAZINE Y</div>
         <nav class="menu">
           <a href="#about">ABOUT</a>
           <a href="#works">WORKS</a>
@@ -56,7 +100,7 @@
       <section id="about" class="profile">
         <div class="container">
           <div class="section-header">
-            <span class="label">EDITORIAL : ABOUT ME</span>
+            <span class="label">ABOUT ME</span>
           </div>
 
           <div class="profile-intro-grid">
@@ -107,8 +151,8 @@
             <span class="label" style="text-transform: uppercase; letter-spacing: 1px; font-weight: 800;">FEATURED STORIES</span>
           </div>
 
-          <div class="work-item show" style="display: grid; grid-template-columns: 120px 1fr; gap: 40px; padding: 60px 0; border-bottom: 1px solid #ddd; position: relative;">
-            <div style="border-left: 12px solid var(--point-green); padding-left: 12px;">
+          <div class="work-item show hover-jaksim" style="display: grid; grid-template-columns: 120px 1fr; gap: 40px; padding: 60px 0; border-bottom: 1px solid #ddd; position: relative;">
+            <div style="border-left: 12px solid #7C6DFF; padding-left: 12px;">
               <span style="font-size: 1.8rem; font-weight: 900; display: block; line-height: 1.1;">01</span>
               <span style="font-size: 0.75rem; font-weight: 700; color: #888; text-transform: uppercase; display: block; margin-top: 4px; letter-spacing: -0.5px;">MAIN APP PROJECT</span>
             </div>
@@ -124,15 +168,15 @@
               </div>
               <div style="display: flex; gap: 32px; flex-wrap: wrap;">
                 <a href="jaksim_nongjang_case.html" class="btn-link">READ CASE STUDY →</a>
-                <a href="https://uiux0718.github.io/zagsim/" target="_blank" class="btn-link" style="color: var(--point-green); border-color: var(--point-green); transition: var(--transition);">
+                <a href="https://uiux0718.github.io/zagsim/" target="_blank" class="btn-link">
                   VIEW APP →
                 </a>
               </div>
             </div>
           </div>
 
-          <div class="work-item show" style="display: grid; grid-template-columns: 120px 1fr; gap: 40px; padding: 60px 0; border-bottom: 1px solid #ddd; position: relative;">
-            <div style="border-left: 12px solid var(--point-purple); padding-left: 12px;">
+          <div class="work-item show hover-ki" style="display: grid; grid-template-columns: 120px 1fr; gap: 40px; padding: 60px 0; border-bottom: 1px solid #ddd; position: relative;">
+            <div style="border-left: 12px solid #39FF14; padding-left: 12px;">
               <span style="font-size: 1.8rem; font-weight: 900; display: block; line-height: 1.1;">02</span>
               <span style="font-size: 0.75rem; font-weight: 700; color: #888; text-transform: uppercase; display: block; margin-top: 4px; letter-spacing: -0.5px;">WEB DESIGN</span>
             </div>
@@ -147,24 +191,24 @@
                 #Web_Design #Dark_Theme #Responsive_Web
               </div>
               <div>
-                <a href="https://uiux0718.github.io/redesign-project/" target="_blank" class="btn-link" style="color: var(--point-purple); border-color: var(--point-purple); transition: var(--transition);">
+                <a href="https://uiux0718.github.io/redesign-project/" target="_blank" class="btn-link">
                   VIEW SITE →
                 </a>
               </div>
             </div>
           </div>
 
-          <article class="work-item highlight-purple" onclick="window.open('https://onfcompany0718.cafe24.com/')" style="margin-top: 40px; cursor: pointer;">
+          <article class="work-item hover-mood" onclick="window.open('https://onfcompany0718.cafe24.com/')" style="margin-top: 40px; cursor: pointer; padding: 30px; border: 1px solid #eee; border-radius: 12px; display: block;">
             <div class="work-meta">
-              <p class="work-num">03</p>
-              <p class="work-cat">E-COMMERCE</p>
+              <p class="work-num" style="font-size: 1.8rem; font-weight: 900; margin: 0;">03</p>
+              <p class="work-cat" style="font-size: 0.75rem; font-weight: 700; color: #888; text-transform: uppercase; margin-bottom: 12px;">E-COMMERCE</p>
             </div>
             <div class="work-content">
-              <h2 class="work-title">무드바이트 : MOOD BITE</h2>
-              <p class="work-desc">
-                감정 상태 기반 상품 큐레이션과 브랜드 경험을 결합한 쇼핑몰 프로젝트입니다.
+              <h2 class="work-title" style="font-size: 2rem; font-weight: 800; margin: 0 0 12px 0; letter-spacing: -1px;">무드바이트 : MOOD BITE</h2>
+              <p class="work-desc" style="max-width: 680px; margin-bottom: 24px; font-size: 1.1rem; color: #444; line-height: 1.6;">
+                감정 상태 기반 상품 큐레이션과 brand 경험을 결합한 쇼핑몰 프로젝트입니다.
               </p>
-              <p class="work-tags">#Visual_Branding #Emotion_UX #Cafe24</p>
+              <p class="work-tags" style="margin-bottom: 32px; font-size: 0.9rem; font-weight: 700; color: #999;">#Visual_Branding #Emotion_UX #Cafe24</p>
               <span class="btn-link">VIEW SITE →</span>
             </div>
           </article>
