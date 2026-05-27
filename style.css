@@ -2,7 +2,7 @@
   --bg-color: #f8f8f8;
   --text-main: #1a1a1a;
 
-  /* 브랜드별 정확한 시그니처 컬러 변수 리매칭 */
+  /* 브랜드별 고유 시그니처 컬러 */
   --point-jaksim-purple: #7C6DFF; /* 작심농장 보라색 */
   --point-ki-neongreen: #39FF14;   /* KI ENTERTAINMENT 네온그린 */
   --point-mood-yellow: #FFCC00;    /* 무드바이트 노란색 */
@@ -178,7 +178,9 @@ a {
   color: #555;
 }
 
-/* Works (FEATURED STORIES) 기본 공통 디자인 */
+/* ==========================================================================
+   FEATURED STORIES 주요 3가지 프로젝트 공통 레이아웃 (라인 가로배치 통일)
+   ========================================================================== */
 
 .work-item {
   display: grid;
@@ -191,6 +193,7 @@ a {
   opacity: 0;
   transform: translateY(40px);
   will-change: transform, opacity;
+  background: transparent; /* 무드바이트에 들어가 있던 흰 배경 제거 */
 }
 
 .work-item.show {
@@ -198,6 +201,7 @@ a {
   transform: translateY(0);
 }
 
+/* 마우스를 올리면 전체적으로 왼쪽에서 20px 부드럽게 밀려나오는 공통 효과 */
 .work-item:hover {
   padding-left: 20px;
 }
@@ -217,6 +221,7 @@ a {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 900;
   margin: 12px 0;
+  transition: var(--transition);
 }
 
 .work-desc {
@@ -241,63 +246,47 @@ a {
   transition: var(--transition);
 }
 
-/* ==========================================================================
-   중요 3가지 프로젝트 개별 독점 HOVER INTERACTION STYLE
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   각 프로젝트별 개별 HOVER 컬러 디자인 (레이아웃은 동일, 색상만 다르게)
+   -------------------------------------------------------------------------- */
 
-/* 01. 작심농장 (Hover 시: 보라색 #7C6DFF 연출) */
+/* 01. 작심농장 (Hover 시: 좌측 보라색 라인 + 텍스트 보라색 변경) */
 .hover-jaksim:hover {
   border-left: 12px solid var(--point-jaksim-purple) !important;
 }
 .hover-jaksim:hover .work-title {
   color: var(--point-jaksim-purple) !important;
 }
-.hover-jaksim .btn-link {
-  border-bottom-color: #000;
-}
 .hover-jaksim .btn-link:hover {
   color: var(--point-jaksim-purple) !important;
   border-bottom-color: var(--point-jaksim-purple) !important;
 }
 
-/* 02. KI ENTERTAINMENT (Hover 시: 네온그린 #39FF14 연출) */
+/* 02. KI ENTERTAINMENT (Hover 시: 좌측 네온그린 라인 + 텍스트 네온그린 변경) */
 .hover-ki:hover {
   border-left: 12px solid var(--point-ki-neongreen) !important;
 }
 .hover-ki:hover .work-title {
   color: var(--point-ki-neongreen) !important;
 }
-.hover-ki .btn-link {
-  border-bottom-color: #000;
-}
 .hover-ki .btn-link:hover {
   color: var(--point-ki-neongreen) !important;
   border-bottom-color: var(--point-ki-neongreen) !important;
 }
 
-/* 03. 무드바이트 카드 (Hover 시: 노란색 #FFCC00 테두리 및 텍스트 매칭) */
-.hover-mood {
-  border: 1px solid #eee !important;
-  border-radius: 12px;
-  background: #fff;
-  transition: var(--transition);
-}
+/* 03. 무드바이트 (기존 카드 스타일 완전 삭제 -> 가로형 통일 및 Hover 시 노란색 변경) */
 .hover-mood:hover {
-  padding-left: 0px !important; /* 카드는 좌측 선 확장이 아니므로 패딩 유지 */
-  border-color: var(--point-mood-yellow) !important;
-  box-shadow: 0 20px 40px rgba(255, 204, 0, 0.12) !important;
+  border-left: 12px solid var(--point-mood-yellow) !important;
 }
 .hover-mood:hover .work-title {
   color: var(--point-mood-yellow) !important;
 }
-.hover-mood .btn-link {
-  border-bottom-color: #000;
-}
-.hover-mood:hover .btn-link {
+.hover-mood .btn-link:hover {
   color: var(--point-mood-yellow) !important;
   border-bottom-color: var(--point-mood-yellow) !important;
 }
 
+/* ========================================================================== */
 
 /* Archive Grid */
 
@@ -398,281 +387,4 @@ a {
     letter-spacing: -1px;
   }
 
-  .hero-sub {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .profile-intro-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .work-item {
-    grid-template-columns: 1fr;
-  }
-
-  .archive-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ==========================================================================
-   CONTACT ME 모달 팝업 스타일
-   ========================================================================== */
-
-.contact-modal {
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.contact-modal.active {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.modal-content {
-  position: relative;
-  width: 90%;
-  max-width: 760px;
-  background-color: #031e0c;
-  border-radius: 4px;
-  padding: 80px 40px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-  text-align: center;
-  box-sizing: border-box;
-  transform: translateY(20px);
-  transition: transform 0.3s ease;
-}
-
-.contact-modal.active .modal-content {
-  transform: translateY(0);
-}
-
-.modal-close-btn {
-  position: absolute;
-  top: 24px;
-  right: 28px;
-  background: none;
-  border: none;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 32px;
-  font-weight: 300;
-  cursor: pointer;
-  line-height: 1;
-  transition: color 0.2s ease;
-}
-
-.modal-close-btn:hover {
-  color: #ffffff;
-}
-
-.modal-title {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 64px;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: 2px;
-  margin: 0 0 48px 0;
-  text-transform: uppercase;
-}
-
-.modal-info-container {
-  display: inline-block;
-  text-align: left;
-  max-width: 100%;
-}
-
-.info-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.info-row:last-child {
-  margin-bottom: 0;
-}
-
-.github-row {
-  margin-top: 32px;
-  position: relative;
-}
-
-.info-label {
-  display: inline-block;
-  width: 90px;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 16px;
-  text-transform: lowercase;
-}
-
-.info-value {
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 400;
-  font-size: 16px;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-a.info-value:hover {
-  color: #ffffff;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-}
-
-.github-icon {
-  width: 24px;
-  height: 24px;
-  color: #ffffff;
-  margin-right: 20px;
-  flex-shrink: 0;
-}
-
-.link-underlined {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-@media (max-width: 768px) {
-  .modal-content {
-    width: 95%;
-    padding: 60px 24px;
-  }
-
-  .modal-title {
-    font-size: 44px;
-    margin-bottom: 36px;
-  }
-
-  .info-row {
-    font-size: 15px;
-    margin-bottom: 20px;
-  }
-
-  .info-label {
-    width: 75px;
-    font-size: 14px;
-  }
-
-  .info-value {
-    font-size: 14px;
-  }
-
-  .github-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 15px;
-  }
-}
-
-/* 스크롤 시 스르륵 나타나는 인터랙션용 초기 상태 */
-.small-card {
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s ease,
-    background-color 0.4s ease;
-}
-
-/* 감지되었을 때 나타나는 클래스 */
-.small-card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* 청년마음쉼터 섹션 전용 스타일 */
-.mind-shelter-section {
-  padding: 100px 0;
-  background-color: #fdfbf7;
-  font-family: "Pretendard", sans-serif;
-}
-
-.ms-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.ms-section-tag {
-  font-weight: 900;
-  font-size: 0.85rem;
-  color: #bbb;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  display: block;
-}
-
-/* 브랜드 스토리 카드 */
-.ms-story-card {
-  background: #fff;
-  padding: 60px;
-  border-radius: 60px;
-  text-align: center;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);
-  margin-bottom: 60px;
-}
-
-.ms-main-copy {
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1.4;
-  margin-bottom: 20px;
-}
-
-/* 로고 타입 그리드 */
-.ms-logo-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 20px;
-}
-
-.ms-logo-box {
-  background: #fff;
-  padding: 40px;
-  border-radius: 30px;
-  text-align: center;
-  border: 1px solid #f0f0f0;
-}
-
-.ms-logo-box img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
-.ms-label {
-  display: block;
-  margin-top: 15px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #ccc;
-}
-
-/* 반응형 처리 */
-@media (max-width: 768px) {
-  .ms-logo-grid {
-    grid-template-columns: 1fr;
-  }
-  .ms-story-card {
-    padding: 40px 20px;
-  }
-  .ms-main-copy {
-    font-size: 1.5rem;
-  }
-}
+  .hero-
