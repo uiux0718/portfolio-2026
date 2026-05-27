@@ -160,9 +160,41 @@ a {
   margin-left: 8px;
 }
 
-.contact-list p {
-  margin-bottom: 12px;
-  font-size: 1rem;
+/* About Me 내부 인라인 스타일 클래스 통합화 */
+.about-contact-list {
+  margin-top: 24px; 
+  font-size: 13px; 
+  line-height: 1.7; 
+  color: #444; 
+  width: 100%;
+}
+
+.about-contact-row {
+  margin-bottom: 12px; 
+  display: flex; 
+  align-items: flex-start;
+}
+
+.about-contact-row:last-child {
+  margin-bottom: 0;
+}
+
+.about-contact-label {
+  font-family: 'Montserrat', sans-serif; 
+  font-weight: 700; 
+  color: #000; 
+  letter-spacing: 0.08em; 
+  display: inline-block; 
+  width: 75px; 
+  flex-shrink: 0; 
+  font-size: 12px;
+}
+
+.about-contact-desc {
+  color: #666; 
+  font-size: 12.5px; 
+  letter-spacing: -0.01em; 
+  word-break: keep-all;
 }
 
 .main-statement {
@@ -182,18 +214,25 @@ a {
    FEATURED STORIES 주요 3가지 프로젝트 공통 레이아웃 (라인 가로배치 통일)
    ========================================================================== */
 
+.featured-stories {
+  padding: 30px 0;
+}
+
 .work-item {
   display: grid;
   grid-template-columns: 120px 1fr;
   gap: 40px;
-  padding: 80px 0;
+  padding: 60px 0;
   border-bottom: 1px solid #ddd;
   cursor: pointer;
   transition: var(--transition);
   opacity: 0;
   transform: translateY(40px);
   will-change: transform, opacity;
-  background: transparent; /* 무드바이트에 들어가 있던 흰 배경 제거 */
+  background: transparent !important;
+  position: relative;
+  box-shadow: none !important;
+  border-radius: 0 !important;
 }
 
 .work-item.show {
@@ -206,21 +245,33 @@ a {
   padding-left: 20px;
 }
 
+.work-meta-block {
+  padding-left: 12px;
+}
+
 .work-num {
   font-size: 1.8rem;
   font-weight: 900;
+  display: block;
+  line-height: 1.1;
 }
 
 .work-cat {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: #888;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 4px;
+  letter-spacing: -0.5px;
 }
 
 .work-title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 900;
-  margin: 12px 0;
+  margin: 0 0 12px 0;
+  letter-spacing: -1px;
+  color: var(--text-main);
   transition: var(--transition);
 }
 
@@ -229,6 +280,8 @@ a {
   margin-bottom: 24px;
   font-size: 1.1rem;
   color: #444;
+  word-break: keep-all;
+  line-height: 1.6;
 }
 
 .work-tags {
@@ -236,13 +289,22 @@ a {
   font-size: 0.9rem;
   font-weight: 700;
   color: #999;
+  letter-spacing: 0.5px;
+}
+
+.work-links-flex {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
 }
 
 .btn-link {
   display: inline-block;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #ddd !important;
   padding-bottom: 4px;
   font-weight: 800;
+  color: #1c1c1e !important;
+  text-decoration: none;
   transition: var(--transition);
 }
 
@@ -250,7 +312,12 @@ a {
    각 프로젝트별 개별 HOVER 컬러 디자인 (레이아웃은 동일, 색상만 다르게)
    -------------------------------------------------------------------------- */
 
-/* 01. 작심농장 (Hover 시: 좌측 보라색 라인 + 텍스트 보라색 변경) */
+/* 기본 디폴트 상태의 왼쪽 가로선 세팅 */
+.side-jaksim { border-left: 12px solid var(--point-jaksim-purple); }
+.side-ki { border-left: 12px solid var(--point-ki-neongreen); }
+.side-mood { border-left: 12px solid var(--point-mood-yellow); }
+
+/* 01. 작심농장 (보라색 포인트 연동) */
 .hover-jaksim:hover {
   border-left: 12px solid var(--point-jaksim-purple) !important;
 }
@@ -262,7 +329,7 @@ a {
   border-bottom-color: var(--point-jaksim-purple) !important;
 }
 
-/* 02. KI ENTERTAINMENT (Hover 시: 좌측 네온그린 라인 + 텍스트 네온그린 변경) */
+/* 02. KI ENTERTAINMENT (네온그린 포인트 연동) */
 .hover-ki:hover {
   border-left: 12px solid var(--point-ki-neongreen) !important;
 }
@@ -274,7 +341,7 @@ a {
   border-bottom-color: var(--point-ki-neongreen) !important;
 }
 
-/* 03. 무드바이트 (기존 카드 스타일 완전 삭제 -> 가로형 통일 및 Hover 시 노란색 변경) */
+/* 03. 무드바이트 (노란색 포인트 연동 - 이제 상단 카드들과 100% 동일한 반응을 보입니다) */
 .hover-mood:hover {
   border-left: 12px solid var(--point-mood-yellow) !important;
 }
@@ -289,6 +356,9 @@ a {
 /* ========================================================================== */
 
 /* Archive Grid */
+.archive-section {
+  padding: 60px 0;
+}
 
 .archive-grid {
   display: grid;
@@ -379,6 +449,134 @@ a {
   letter-spacing: 1px;
 }
 
+/* Contact Modal Styles */
+
+.contact-modal {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.contact-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 760px;
+  background-color: #031e0c;
+  border-radius: 4px;
+  padding: 80px 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  box-sizing: border-box;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.contact-modal.active .modal-content {
+  transform: translateY(0);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 32px;
+  font-weight: 300;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.modal-close-btn:hover {
+  color: #ffffff;
+}
+
+.modal-title {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin: 0 0 48px 0;
+  text-transform: uppercase;
+}
+
+.modal-info-container {
+  display: inline-block;
+  text-align: left;
+  max-width: 100%;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.github-row {
+  margin-top: 32px;
+  position: relative;
+}
+
+.info-label {
+  display: inline-block;
+  width: 90px;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: lowercase;
+}
+
+.info-value {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a.info-value:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+}
+
+.github-icon {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.link-underlined {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {
@@ -387,4 +585,53 @@ a {
     letter-spacing: -1px;
   }
 
-  .hero-
+  .hero-sub {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .profile-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .work-item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 40px 0;
+  }
+
+  .archive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 60px 24px;
+  }
+
+  .modal-title {
+    font-size: 44px;
+    margin-bottom: 36px;
+  }
+
+  .info-row {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .info-label {
+    width: 75px;
+    font-size: 14px;
+  }
+
+  .info-value {
+    font-size: 14px;
+  }
+
+  .github-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+  }
+}
