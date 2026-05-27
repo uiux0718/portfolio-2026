@@ -429,12 +429,145 @@
     </script>
   </body>
 </html>
-<a href="https://uiux0718.github.io/redesign-project/" target="_blank" class="project-link-btn redesign-btn">
-    <span>01. KI 엔터 리디자인 프로젝트</span>
-    <small>반응형 웹 구현 완료</small>
-</a>
+          <section class="archive-section" style="padding-top: 0; border-top: 1px solid #ddd;">
+    <div class="container">
+        
+        <div class="section-header" style="margin-bottom: 60px; margin-top: 60px;">
+            <span class="label" style="text-transform: uppercase; letter-spacing: 1px;">More Projects</span>
+        </div>
+        
+        <div class="more-projects-grid">
+            
+            <div class="more-card">
+                <div class="more-card-content">
+                    <span class="more-num">01</span>
+                    <strong class="more-title">KI ENTERTAINMENT WEB DESIGN</strong>
+                    <span class="more-cat">WEB PC & TABLET & MOBILE RESPONSIVE</span>
+                    <p class="more-desc">
+                        신생 기획사로서 '온앤오프(ONF)'가 유일한 소속 가수라는 특성을 영리하게 활용한 프로젝트입니다. 불필요한 정보 구조를 덜어내고, 단일 아티스트의 고유한 브랜드 아이덴티티와 비주얼에 온전히 몰입할 수 있도록 화면을 설계했습니다.
+                    </p>
+                </div>
+                <div class="more-card-action">
+                    <a href="https://uiux0718.github.io/redesign-project/" target="_blank" class="more-btn-link highlight-purple-btn">
+                        웹사이트 시연 보러가기 →
+                    </a>
+                </div>
+            </div>
+            
+            <div class="more-card">
+                <div class="more-card-content">
+                    <span class="more-num">03</span>
+                    <strong class="more-title">ZAGSIM FARM APP DESIGN</strong>
+                    <span class="more-cat">MOBILE APP UI/UX & 퍼블리싱 시연</span>
+                    <p class="more-desc">
+                        사용자 경험(UX) 분석을 토대로 기획한 모바일 앱 서비스 디자인 프로젝트입니다. 피그마 와이어프레임 설계를 거쳐 실제 모바일 환경에서 직관적으로 구동되고 체험해 볼 수 있도록 퍼블리싱한 앱 시연 화면입니다.
+                    </p>
+                </div>
+                <div class="more-card-action">
+                    <a href="https://uiux0718.github.io/zagsim/" target="_blank" class="more-btn-link highlight-green-btn">
+                        모바일 앱 시연 보러가기 →
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</section>
 
-<a href="https://uiux0718.github.io/zagsim/" target="_blank" class="project-link-btn zagsim-btn">
-    <span>03. 작심농장 앱디자인 프로젝트</span>
-    <small>모바일 웹 구현 완료</small>
-</a>
+<style>
+.more-projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.more-card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 50px 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition); /* 예지님의 부드러운 베지에 트랜지션 적용 */
+}
+
+.more-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+}
+
+.more-num {
+    font-size: 1.8rem;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.more-title {
+    font-size: 1.3rem;
+    font-weight: 900;
+    display: block;
+    color: var(--text-main);
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.more-cat {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+}
+
+.more-desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+/* 시연 보러가기 버튼 공통 스타일 (.btn-link 가이드 계승) */
+.more-btn-link {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: #fff;
+    transition: var(--transition);
+}
+
+/* 각 프로젝트 고유의 정체성 컬러 매칭 */
+.highlight-purple-btn {
+    background: #1a1a1a; /* 기본 시크한 블랙 */
+}
+.highlight-purple-btn:hover {
+    background: var(--point-purple); /* 호버 시 퍼플 포인트로 스위칭 */
+}
+
+.highlight-green-btn {
+    background: #1a1a1a;
+}
+.highlight-green-btn:hover {
+    background: var(--point-green); /* 호버 시 작심농장 그린 포인트로 스위칭 */
+}
+
+/* 모바일 및 태블릿 반응형 (예지님의 900px 미디어쿼리 시스템과 동기화) */
+@media (max-width: 900px) {
+    .more-projects-grid {
+        grid-template-columns: 1fr; /* 모바일에서는 세로 1줄로 쾌적하게 배치 */
+        gap: 30px;
+    }
+    .more-card {
+        padding: 40px 30px;
+    }
+    .more-title {
+        font-size: 1.15rem;
+    }
+}
+</style>
+    
