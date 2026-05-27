@@ -1,454 +1,3 @@
-:root {
-  --bg-color: #f8f8f8;
-  --text-main: #1a1a1a;
-
-  /* 브랜드별 고유 시그니처 컬러 */
-  --point-jaksim-purple: #7C6DFF; /* 작심농장 보라색 */
-  --point-ki-neongreen: #39FF14;   /* KI ENTERTAINMENT 네온그린 */
-  --point-mood-yellow: #FFCC00;    /* 무드바이트 노란색 */
-  
-  --point-green: #00a86b;
-  --point-purple: #8e44ad;
-  --point-yellow: #ffd700;
-  --point-deepgreen: #003c32;
-
-  --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: var(--bg-color);
-  color: var(--text-main);
-  font-family: "Pretendard", sans-serif;
-  line-height: 1.6;
-  word-break: keep-all;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* Navigation */
-
-.navbar {
-  position: sticky;
-  top: 0;
-  padding: 24px 0;
-  background: rgba(248, 248, 248, 0.9);
-  border-bottom: 1px solid #ddd;
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-}
-
-.nav-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: -1px;
-}
-
-.menu a {
-  margin-left: 32px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  transition: var(--transition);
-}
-
-.menu a:hover {
-  color: var(--point-green);
-}
-
-/* Hero */
-
-.hero {
-  padding: 120px 0 90px;
-  border-bottom: 2px solid #000;
-}
-
-.hero-header-top {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 48px;
-  font-size: 0.9rem;
-  font-weight: 800;
-}
-
-.hero-title {
-  max-width: 900px;
-  font-size: clamp(3rem, 8vw, 5.8rem);
-  line-height: 1.05;
-  font-weight: 900;
-  letter-spacing: -3px;
-  margin-bottom: 72px;
-}
-
-.hero-sub {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  border-top: 1px solid #000;
-  padding-top: 24px;
-}
-
-.sub-label {
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: #888;
-  margin-bottom: 8px;
-}
-
-.hero-sub p:not(.sub-label) {
-  font-size: 1.05rem;
-  font-weight: 700;
-}
-
-/* About */
-
-.profile {
-  padding: 100px 0;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-}
-
-.section-header {
-  padding-bottom: 32px;
-  border-bottom: 1px solid #000;
-  margin-bottom: 48px;
-}
-
-.label {
-  font-size: 1.2rem;
-  font-weight: 900;
-}
-
-.profile-intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 64px;
-}
-
-.identity-card h2 {
-  font-size: 2.3rem;
-  font-weight: 900;
-  margin-bottom: 24px;
-}
-
-.eng {
-  font-size: 1.2rem;
-  color: #aaa;
-  margin-left: 8px;
-}
-
-/* About Me 내부 인라인 스타일 클래스 통합화 */
-.about-contact-list {
-  margin-top: 24px; 
-  font-size: 13px; 
-  line-height: 1.7; 
-  color: #444; 
-  width: 100%;
-}
-
-.about-contact-row {
-  margin-bottom: 12px; 
-  display: flex; 
-  align-items: flex-start;
-}
-
-.about-contact-row:last-child {
-  margin-bottom: 0;
-}
-
-.about-contact-label {
-  font-family: 'Montserrat', sans-serif; 
-  font-weight: 700; 
-  color: #000; 
-  letter-spacing: 0.08em; 
-  display: inline-block; 
-  width: 75px; 
-  flex-shrink: 0; 
-  font-size: 12px;
-}
-
-.about-contact-desc {
-  color: #666; 
-  font-size: 12.5px; 
-  letter-spacing: -0.01em; 
-  word-break: keep-all;
-}
-
-.main-statement {
-  font-size: 2rem;
-  line-height: 1.45;
-  font-weight: 800;
-  margin-bottom: 32px;
-}
-
-.sub-statement {
-  max-width: 650px;
-  font-size: 1.1rem;
-  color: #555;
-}
-
-/* ==========================================================================
-   FEATURED STORIES 주요 3가지 프로젝트 공통 레이아웃 (라인 가로배치 통일)
-   ========================================================================== */
-
-.featured-stories {
-  padding: 30px 0;
-}
-
-.work-item {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 40px;
-  padding: 60px 0;
-  border-bottom: 1px solid #ddd;
-  cursor: pointer;
-  transition: var(--transition);
-  opacity: 0;
-  transform: translateY(40px);
-  will-change: transform, opacity;
-  background: transparent !important;
-  position: relative;
-  box-shadow: none !important;
-  border-radius: 0 !important;
-}
-
-.work-item.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* 마우스를 올리면 전체적으로 왼쪽에서 20px 부드럽게 밀려나오는 공통 효과 */
-.work-item:hover {
-  padding-left: 20px;
-}
-
-.work-meta-block {
-  padding-left: 12px;
-}
-
-.work-num {
-  font-size: 1.8rem;
-  font-weight: 900;
-  display: block;
-  line-height: 1.1;
-}
-
-.work-cat {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #888;
-  text-transform: uppercase;
-  display: block;
-  margin-top: 4px;
-  letter-spacing: -0.5px;
-}
-
-.work-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 900;
-  margin: 0 0 12px 0;
-  letter-spacing: -1px;
-  color: var(--text-main);
-  transition: var(--transition);
-}
-
-.work-desc {
-  max-width: 680px;
-  margin-bottom: 24px;
-  font-size: 1.1rem;
-  color: #444;
-  word-break: keep-all;
-  line-height: 1.6;
-}
-
-.work-tags {
-  margin-bottom: 32px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #999;
-  letter-spacing: 0.5px;
-}
-
-.work-links-flex {
-  display: flex;
-  gap: 32px;
-  flex-wrap: wrap;
-}
-
-.btn-link {
-  display: inline-block;
-  border-bottom: 2px solid #ddd !important;
-  padding-bottom: 4px;
-  font-weight: 800;
-  color: #1c1c1e !important;
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-/* --------------------------------------------------------------------------
-   각 프로젝트별 개별 HOVER 컬러 디자인 (레이아웃은 동일, 색상만 다르게)
-   -------------------------------------------------------------------------- */
-
-/* 기본 디폴트 상태의 왼쪽 가로선 세팅 */
-.side-jaksim { border-left: 12px solid var(--point-jaksim-purple); }
-.side-ki { border-left: 12px solid var(--point-ki-neongreen); }
-.side-mood { border-left: 12px solid var(--point-mood-yellow); }
-
-/* 01. 작심농장 (보라색 포인트 연동) */
-.hover-jaksim:hover {
-  border-left: 12px solid var(--point-jaksim-purple) !important;
-}
-.hover-jaksim:hover .work-title {
-  color: var(--point-jaksim-purple) !important;
-}
-.hover-jaksim .btn-link:hover {
-  color: var(--point-jaksim-purple) !important;
-  border-bottom-color: var(--point-jaksim-purple) !important;
-}
-
-/* 02. KI ENTERTAINMENT (네온그린 포인트 연동) */
-.hover-ki:hover {
-  border-left: 12px solid var(--point-ki-neongreen) !important;
-}
-.hover-ki:hover .work-title {
-  color: var(--point-ki-neongreen) !important;
-}
-.hover-ki .btn-link:hover {
-  color: var(--point-ki-neongreen) !important;
-  border-bottom-color: var(--point-ki-neongreen) !important;
-}
-
-/* 03. 무드바이트 (노란색 포인트 연동 - 이제 상단 카드들과 100% 동일한 반응을 보입니다) */
-.hover-mood:hover {
-  border-left: 12px solid var(--point-mood-yellow) !important;
-}
-.hover-mood:hover .work-title {
-  color: var(--point-mood-yellow) !important;
-}
-.hover-mood .btn-link:hover {
-  color: var(--point-mood-yellow) !important;
-  border-bottom-color: var(--point-mood-yellow) !important;
-}
-
-/* ========================================================================== */
-
-/* Archive Grid */
-.archive-section {
-  padding: 60px 0;
-}
-
-.archive-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  margin-top: 80px;
-}
-
-.small-card {
-  background: #fff;
-  border: 1px solid #eee;
-  padding: 40px;
-  transition: var(--transition);
-  opacity: 0;
-  transform: translateY(40px);
-  will-change: transform, opacity;
-}
-
-.small-card.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.small-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
-
-.card-thumb {
-  width: 100%;
-  height: 280px;
-  margin: 24px 0;
-  overflow: hidden;
-  border-radius: 4px;
-  background: #eee;
-}
-
-.card-thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: contrast(1.03) saturate(1.02);
-  transition: transform 0.6s ease;
-}
-
-.small-card:hover img {
-  transform: scale(1.08);
-}
-
-.strategy-summary {
-  padding-top: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: #666;
-}
-
-/* Project Colors */
-
-.crunky-card {
-  background: var(--point-yellow);
-  border: none;
-}
-
-.j-estina-card {
-  background: var(--point-deepgreen);
-  color: #fff;
-  border: none;
-}
-
-.j-estina-card .strategy-summary {
-  border-top-color: rgba(255, 255, 255, 0.2);
-  color: #eee;
-}
-
-/* Footer */
-
-.footer {
-  padding: 120px 0 60px;
-  border-top: 1px solid #ddd;
-  text-align: center;
-}
-
-.footer p {
-  font-size: 0.85rem;
-  font-weight: 800;
-  color: #aaa;
-  letter-spacing: 1px;
-}
-
 /* Contact Modal Styles */
 
 .contact-modal {
@@ -456,16 +5,16 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(5px);
-  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75); /* 뒷배경을 어둡고 고급스럽게 차단 */
+  backdrop-filter: blur(10px);
+  z-index: 99999;
   justify-content: center;
   align-items: center;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .contact-modal.active {
@@ -476,15 +25,16 @@ a {
 .modal-content {
   position: relative;
   width: 90%;
-  max-width: 760px;
-  background-color: #031e0c;
-  border-radius: 4px;
-  padding: 80px 40px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  max-width: 600px; /* 너무 퍼지지 않게 적정 너비 제한 */
+  background-color: #05190e; /* 기존 컨셉의 깊은 딥그린/다크 톤 유지 */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 60px 40px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
   text-align: center;
   box-sizing: border-box;
-  transform: translateY(20px);
-  transition: transform 0.3s ease;
+  transform: translateY(30px);
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .contact-modal.active .modal-content {
@@ -493,13 +43,13 @@ a {
 
 .modal-close-btn {
   position: absolute;
-  top: 24px;
-  right: 28px;
+  top: 20px;
+  right: 24px;
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 32px;
-  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 36px;
+  font-weight: 200;
   cursor: pointer;
   line-height: 1;
   transition: color 0.2s ease;
@@ -510,66 +60,70 @@ a {
 }
 
 .modal-title {
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 64px;
-  font-weight: 700;
+  font-family: "Pretendard", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
   color: #ffffff;
-  letter-spacing: 2px;
-  margin: 0 0 48px 0;
-  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin: 0 0 40px 0;
 }
 
 .modal-info-container {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   text-align: left;
   max-width: 100%;
+  padding: 0 10px;
 }
 
 .info-row {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-.info-row:last-child {
-  margin-bottom: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 16px;
 }
 
 .github-row {
-  margin-top: 32px;
-  position: relative;
+  margin-top: 10px;
+  border-bottom: none; /* 마지막 줄은 언더라인 제외 */
+  padding-bottom: 0;
 }
 
 .info-label {
   display: inline-block;
-  width: 90px;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 16px;
-  text-transform: lowercase;
+  width: 100px;
+  font-weight: 800;
+  color: #888; /* 레이블은 가독성 좋게 그레이 톤 처리 */
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  flex-shrink: 0;
 }
 
 .info-value {
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 400;
-  font-size: 16px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.1rem;
   text-decoration: none;
+  word-break: break-all;
   transition: color 0.2s ease;
 }
 
 a.info-value:hover {
-  color: #ffffff;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  color: var(--point-ki-neongreen); /* 링크 호버 시 네온그린 포인트 컬러 연동 */
 }
 
+/* ⚠️ 거대하게 깨지던 SVG 고양이 아이콘 크기 고정 제어 */
 .github-icon {
-  width: 24px;
-  height: 24px;
+  width: 22px !important;
+  height: 22px !important;
   color: #ffffff;
-  margin-right: 20px;
+  margin-right: 16px;
   flex-shrink: 0;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .link-underlined {
@@ -577,61 +131,35 @@ a.info-value:hover {
   text-underline-offset: 4px;
 }
 
-/* Responsive */
-
-@media (max-width: 900px) {
-  .hero-title {
-    font-size: 3.5rem;
-    letter-spacing: -1px;
-  }
-
-  .hero-sub {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .profile-intro-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .work-item {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    padding: 40px 0;
-  }
-
-  .archive-grid {
-    grid-template-columns: 1fr;
-  }
-
+/* Responsive (모바일 대응) */
+@media (max-width: 768px) {
   .modal-content {
-    width: 95%;
-    padding: 60px 24px;
+    width: 92%;
+    padding: 48px 24px;
   }
 
   .modal-title {
-    font-size: 44px;
-    margin-bottom: 36px;
+    font-size: 2rem;
+    margin-bottom: 32px;
   }
 
   .info-row {
-    font-size: 15px;
-    margin-bottom: 20px;
+    font-size: 0.95rem;
+    padding-bottom: 12px;
   }
 
   .info-label {
-    width: 75px;
-    font-size: 14px;
+    width: 80px;
+    font-size: 0.85rem;
   }
 
   .info-value {
-    font-size: 14px;
+    font-size: 0.95rem;
   }
 
   .github-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 15px;
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 12px;
   }
 }
