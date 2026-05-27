@@ -9,50 +9,6 @@
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
     />
     <link rel="stylesheet" href="style.css" />
-    
-    <style>
-      /* 01. 작심농장 전용 스타일 (시그니처: 보라색 #7C6DFF) */
-      .hover-jaksim .btn-link {
-        color: #1c1c1e !important;
-        border-bottom: 2px solid #ddd !important;
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-      .hover-jaksim .btn-link:hover {
-        color: #7C6DFF !important;
-        border-bottom-color: #7C6DFF !important;
-      }
-
-      /* 02. KI ENTERTAINMENT 전용 스타일 (시그니처: 네온 그린 #39FF14) */
-      .hover-ki .btn-link {
-        color: #1c1c1e !important;
-        border-bottom: 2px solid #ddd !important;
-        text-decoration: none;
-        transition: all 0.3s ease;
-      }
-      .hover-ki .btn-link:hover {
-        color: #39FF14 !important;
-        border-bottom-color: #39FF14 !important;
-      }
-
-      /* 03. 무드바이트 전용 스타일 (시그니처: 노란색 #FFCC00) */
-      .hover-mood {
-        transition: all 0.3s ease;
-      }
-      .hover-mood:hover {
-        border-color: #FFCC00 !important;
-        box-shadow: 0 10px 25px rgba(255, 204, 0, 0.15) !important;
-      }
-      .hover-mood .btn-link {
-        color: #1c1c1e !important;
-        border-bottom: 2px solid #ddd !important;
-        transition: all 0.3s ease;
-      }
-      .hover-mood:hover .btn-link {
-        color: #FFCC00 !important;
-        border-bottom-color: #FFCC00 !important;
-      }
-    </style>
   </head>
 
   <body>
@@ -110,20 +66,20 @@
                 <span class="eng">KIM YE JI</span>
               </h2>
 
-              <div class="contact-list" style="margin-top: 24px; font-size: 13px; line-height: 1.7; color: #444; width: 100%;">
-                <div style="margin-bottom: 12px; display: flex; align-items: flex-start;">
-                  <strong style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #000; letter-spacing: 0.08em; display: inline-block; width: 75px; flex-shrink: 0; font-size: 12px;">Y : YEJI</strong>
-                  <span style="color: #666; font-size: 12.5px; letter-spacing: -0.01em; word-break: keep-all;">디자이너 김예지의 시선과 설계 철학이 시작되는 이름</span>
+              <div class="about-contact-list">
+                <div class="about-contact-row">
+                  <strong class="about-contact-label">Y : YEJI</strong>
+                  <span class="about-contact-desc">디자이너 김예지의 시선과 설계 철학이 시작되는 이름</span>
                 </div>
 
-                <div style="margin-bottom: 12px; display: flex; align-items: flex-start;">
-                  <strong style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #000; letter-spacing: 0.08em; display: inline-block; width: 75px; flex-shrink: 0; font-size: 12px;">Y : WHY</strong>
-                  <span style="color: #666; font-size: 12.5px; letter-spacing: -0.01em; word-break: keep-all;">화면 너머 사용자의 이탈과 망설임 속에서 설계의 근거를 찾아냅니다.</span>
+                <div class="about-contact-row">
+                  <strong class="about-contact-label">Y : WHY</strong>
+                  <span class="about-contact-desc">화면 너머 사용자의 이탈과 망설임 속에서 설계의 근거를 찾아냅니다.</span>
                 </div>
 
-                <div style="display: flex; align-items: flex-start">
-                  <strong style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: #000; letter-spacing: 0.08em; display: inline-block; width: 75px; flex-shrink: 0; font-size: 12px;">KEYWORD</strong>
-                  <span style="color: #666; font-size: 12.5px; letter-spacing: -0.01em; word-break: keep-all;">재진입 UX · 회복탄력성 · 구조화</span>
+                <div class="about-contact-row">
+                  <strong class="about-contact-label">KEYWORD</strong>
+                  <span class="about-contact-desc">재진입 UX · 회복탄력성 · 구조화</span>
                 </div>
               </div>
             </div>
@@ -144,79 +100,68 @@
         </div>
       </section>
 
-      <section id="works" class="featured-stories" style="padding: 30px 0;">
+      <section id="works" class="featured-stories">
         <div class="container">
-          
-          <div class="section-header" style="margin-bottom: 32px; border-bottom: 1px solid #000; padding-bottom: 16px;">
-            <span class="label" style="text-transform: uppercase; letter-spacing: 1px; font-weight: 800;">FEATURED STORIES</span>
+          <div class="section-header">
+            <span class="label">FEATURED STORIES</span>
           </div>
 
-          <div class="work-item show hover-jaksim" style="display: grid; grid-template-columns: 120px 1fr; gap: 40px; padding: 60px 0; border-bottom: 1px solid #ddd; position: relative;">
-            <div style="border-left: 12px solid #7C6DFF; padding-left: 12px;">
-              <span style="font-size: 1.8rem; font-weight: 900; display: block; line-height: 1.1;">01</span>
-              <span style="font-size: 0.75rem; font-weight: 700; color: #888; text-transform: uppercase; display: block; margin-top: 4px; letter-spacing: -0.5px;">MAIN APP PROJECT</span>
+          <div class="work-item show hover-jaksim">
+            <div class="work-meta-block side-jaksim">
+              <span class="work-num">01</span>
+              <span class="work-cat">MAIN APP PROJECT</span>
             </div>
-            <div>
-              <h3 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin: 0 0 12px 0; letter-spacing: -1px; color: var(--text-main);">
-                작심농장 : JAKSIM NONGJANG
-              </h3>
-              <p style="max-width: 680px; margin-bottom: 24px; font-size: 1.1rem; color: #444; word-break: keep-all; line-height: 1.6;">
+            <div class="work-content-block">
+              <h3 class="work-title">작심농장 : JAKSIM NONGJANG</h3>
+              <p class="work-desc">
                 습관 기록 과정을 직관적인 기록 화면 중심으로 구성한 UI/UX 프로젝트입니다. 사용자가 기록 현황을 쉽게 확인할 수 있도록 단순한 화면 흐름과 기록 관리 구조를 중심으로 디자인했습니다.
               </p>
-              <div style="margin-bottom: 32px; font-size: 0.9rem; font-weight: 700; color: #999; letter-spacing: 0.5px;">
-                #UX_Strategy #UI_Design #App_Service
-              </div>
-              <div style="display: flex; gap: 32px; flex-wrap: wrap;">
+              <div class="work-tags">#UX_Strategy #UI_Design #App_Service</div>
+              <div class="work-links-flex">
                 <a href="jaksim_nongjang_case.html" class="btn-link">READ CASE STUDY →</a>
-                <a href="https://uiux0718.github.io/zagsim/" target="_blank" class="btn-link">
-                  VIEW APP →
-                </a>
+                <a href="https://uiux0718.github.io/zagsim/" target="_blank" class="btn-link">VIEW APP →</a>
               </div>
             </div>
           </div>
 
-          <div class="work-item show hover-ki" style="display: grid; grid-template-columns: 120px 1fr; gap: 40px; padding: 60px 0; border-bottom: 1px solid #ddd; position: relative;">
-            <div style="border-left: 12px solid #39FF14; padding-left: 12px;">
-              <span style="font-size: 1.8rem; font-weight: 900; display: block; line-height: 1.1;">02</span>
-              <span style="font-size: 0.75rem; font-weight: 700; color: #888; text-transform: uppercase; display: block; margin-top: 4px; letter-spacing: -0.5px;">WEB DESIGN</span>
+          <div class="work-item show hover-ki">
+            <div class="work-meta-block side-ki">
+              <span class="work-num">02</span>
+              <span class="work-cat">WEB DESIGN</span>
             </div>
-            <div>
-              <h3 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin: 0 0 12px 0; letter-spacing: -1px; color: var(--text-main);">
-                KI ENTERTAINMENT
-              </h3>
-              <p style="max-width: 680px; margin-bottom: 24px; font-size: 1.1rem; color: #444; word-break: keep-all; line-height: 1.6;">
+            <div class="work-content-block">
+              <h3 class="work-title">KI ENTERTAINMENT</h3>
+              <p class="work-desc">
                 기존 KI ENTERTAINMENT 홈페이지를 분석하여, 모던한 다크테마, 일관된 디자인 언어, 반응형 대응을 중심으로 개선했습니다.
               </p>
-              <div style="margin-bottom: 32px; font-size: 0.9rem; font-weight: 700; color: #999; letter-spacing: 0.5px;">
-                #Web_Design #Dark_Theme #Responsive_Web
-              </div>
-              <div>
-                <a href="https://uiux0718.github.io/redesign-project/" target="_blank" class="btn-link">
-                  VIEW SITE →
-                </a>
+              <div class="work-tags">#Web_Design #Dark_Theme #Responsive_Web</div>
+              <div class="work-links-flex">
+                <a href="https://uiux0718.github.io/redesign-project/" target="_blank" class="btn-link">VIEW SITE →</a>
               </div>
             </div>
           </div>
 
-          <article class="work-item hover-mood" onclick="window.open('https://onfcompany0718.cafe24.com/')" style="margin-top: 40px; cursor: pointer; padding: 30px; border: 1px solid #eee; border-radius: 12px; display: block;">
-            <div class="work-meta">
-              <p class="work-num" style="font-size: 1.8rem; font-weight: 900; margin: 0;">03</p>
-              <p class="work-cat" style="font-size: 0.75rem; font-weight: 700; color: #888; text-transform: uppercase; margin-bottom: 12px;">E-COMMERCE</p>
+          <div class="work-item show hover-mood">
+            <div class="work-meta-block side-mood">
+              <span class="work-num">03</span>
+              <span class="work-cat">E-COMMERCE</span>
             </div>
-            <div class="work-content">
-              <h2 class="work-title" style="font-size: 2rem; font-weight: 800; margin: 0 0 12px 0; letter-spacing: -1px;">무드바이트 : MOOD BITE</h2>
-              <p class="work-desc" style="max-width: 680px; margin-bottom: 24px; font-size: 1.1rem; color: #444; line-height: 1.6;">
+            <div class="work-content-block">
+              <h3 class="work-title">무드바이트 : MOOD BITE</h3>
+              <p class="work-desc">
                 감정 상태 기반 상품 큐레이션과 brand 경험을 결합한 쇼핑몰 프로젝트입니다.
               </p>
-              <p class="work-tags" style="margin-bottom: 32px; font-size: 0.9rem; font-weight: 700; color: #999;">#Visual_Branding #Emotion_UX #Cafe24</p>
-              <span class="btn-link">VIEW SITE →</span>
+              <div class="work-tags">#Visual_Branding #Emotion_UX #Cafe24</div>
+              <div class="work-links-flex">
+                <a href="https://onfcompany0718.cafe24.com/" target="_blank" class="btn-link">VIEW SITE →</a>
+              </div>
             </div>
-          </article>
+          </div>
 
         </div>
       </section>
 
-      <section class="archive-section" style="padding: 60px 0;">
+      <section class="archive-section">
         <div class="container">
           <div class="archive-grid">
             
@@ -363,19 +308,4 @@
       }
 
       function closeContactModal() {
-        const modal = document.getElementById("contactModal");
-        if (modal) {
-          modal.classList.remove("active");
-          document.body.style.overflow = "auto";
-        }
-      }
-
-      function closeContactModalOutside(event) {
-        const modal = document.getElementById("contactModal");
-        if (modal && event.target === modal) {
-          closeContactModal();
-        }
-      }
-    </script>
-  </body>
-</html>
+        const modal =
