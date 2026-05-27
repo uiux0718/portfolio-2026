@@ -110,20 +110,20 @@
           <div class="work-item show" style="display: grid; grid-template-columns: 120px 1fr; gap: 40px; padding: 60px 0; border-bottom: 1px solid #ddd; position: relative;">
             <div style="border-left: 12px solid var(--point-green); padding-left: 12px;">
               <span style="font-size: 1.8rem; font-weight: 900; display: block; line-height: 1.1;">01</span>
-              <span style="font-size: 0.75rem; font-weight: 700; color: #888; text-transform: uppercase; display: block; margin-top: 4px; letter-spacing: -0.5px;">MAIN APP</span>
+              <span style="font-size: 0.75rem; font-weight: 700; color: #888; text-transform: uppercase; display: block; margin-top: 4px; letter-spacing: -0.5px;">MAIN APP PROJECT</span>
             </div>
             <div>
-              <h3 style="font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 900; margin: 0 0 12px 0; letter-spacing: -1px; color: var(--text-main);">
+              <h3 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin: 0 0 12px 0; letter-spacing: -1px; color: var(--text-main);">
                 작심농장 : JAKSIM NONGJANG
               </h3>
-              <p style="max-width: 680px; margin-bottom: 24px; font-size: 1.05rem; color: #444; word-break: keep-all; line-height: 1.6;">
+              <p style="max-width: 680px; margin-bottom: 24px; font-size: 1.1rem; color: #444; word-break: keep-all; line-height: 1.6;">
                 습관 기록 과정을 직관적인 기록 화면 중심으로 구성한 UI/UX 프로젝트입니다. 사용자가 기록 현황을 쉽게 확인할 수 있도록 단순한 화면 흐름과 기록 관리 구조를 중심으로 디자인했습니다.
               </p>
               <div style="margin-bottom: 32px; font-size: 0.9rem; font-weight: 700; color: #999; letter-spacing: 0.5px;">
                 #UX_Strategy #UI_Design #App_Service
               </div>
               <div style="display: flex; gap: 32px; flex-wrap: wrap;">
-                <a href="#" class="btn-link">READ CASE STUDY →</a>
+                <a href="jaksim_nongjang_case.html" class="btn-link">READ CASE STUDY →</a>
                 <a href="https://uiux0718.github.io/zagsim/" target="_blank" class="btn-link" style="color: var(--point-green); border-color: var(--point-green); transition: var(--transition);">
                   VIEW APP →
                 </a>
@@ -137,10 +137,10 @@
               <span style="font-size: 0.75rem; font-weight: 700; color: #888; text-transform: uppercase; display: block; margin-top: 4px; letter-spacing: -0.5px;">WEB DESIGN</span>
             </div>
             <div>
-              <h3 style="font-size: clamp(2rem, 4vw, 2.6rem); font-weight: 900; margin: 0 0 12px 0; letter-spacing: -1px; color: var(--text-main);">
+              <h3 style="font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; margin: 0 0 12px 0; letter-spacing: -1px; color: var(--text-main);">
                 KI ENTERTAINMENT
               </h3>
-              <p style="max-width: 680px; margin-bottom: 24px; font-size: 1.05rem; color: #444; word-break: keep-all; line-height: 1.6;">
+              <p style="max-width: 680px; margin-bottom: 24px; font-size: 1.1rem; color: #444; word-break: keep-all; line-height: 1.6;">
                 기존 KI ENTERTAINMENT 홈페이지를 분석하여, 모던한 다크테마, 일관된 디자인 언어, 반응형 대응을 중심으로 개선했습니다.
               </p>
               <div style="margin-bottom: 32px; font-size: 0.9rem; font-weight: 700; color: #999; letter-spacing: 0.5px;">
@@ -262,7 +262,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        /* Elements Fade-in Animation */
+        /* Intersection Observer - Fade In Animation */
         const fadeObserver = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
@@ -278,7 +278,7 @@
           if (item) fadeObserver.observe(item);
         });
 
-        /* Scroll Active Menu Navigation Trigger */
+        /* Intersection Observer - Navigation Menu Active Triggers */
         const navItems = document.querySelectorAll('.menu a:not([href="#contact"])');
         const sections = document.querySelectorAll("#about, #works");
 
@@ -308,7 +308,7 @@
         });
       });
 
-      /* Modal Control Triggers */
+      /* Modal Popups Controller Logic */
       function openContactModal(event) {
         if (event) event.preventDefault();
         const modal = document.getElementById("contactModal");
