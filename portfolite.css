@@ -293,6 +293,7 @@ body { font-size: 1rem; line-height: 1.6; }
 .about-contact-desc, .profile .sub-statement { color: var(--muted); }
 .about-contact-desc { font-size: .875rem; overflow-wrap: anywhere; }
 .profile .sub-statement { max-width: 33rem; margin-top: 14px; line-height: 1.7; word-break: keep-all; }
+.profile-detail-link { margin-top: 14px; }
 .footer { background: radial-gradient(ellipse at 10% 90%, #292929, transparent 62%); }
 .footer h2 { font-size: clamp(2rem, 7.4vw, 6.25rem); line-height: 1.14; }
 .contact-links { margin-top: clamp(14px, 3vw, 30px); gap: 4px 20px; }
