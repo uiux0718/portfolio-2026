@@ -137,6 +137,13 @@
     #0c0a11;
 }
 
+.footer .footer-message {
+  font-size: clamp(32px, 8vw, 118px);
+  letter-spacing: -.06em;
+  line-height: 1.08;
+  word-break: keep-all;
+}
+
 .scroll-progress {
   position: fixed;
   z-index: 6;
