@@ -65,9 +65,10 @@ body { font-size: 1rem; line-height: 1.6; }
   position: absolute;
   inset: 0;
   z-index: -1;
-  background:
-    radial-gradient(ellipse at center, #050505b0 0, #05050536 50%, transparent 78%),
-    url("silver-satin.jpg") center / cover no-repeat;
+  isolation: isolate;
+  overflow: hidden;
+  pointer-events: none;
+  background: #050505;
 }
 .hero-content {
   position: relative;
@@ -87,7 +88,7 @@ body { font-size: 1rem; line-height: 1.6; }
   z-index: -1;
   inset: 5% -12%;
   border-radius: 50%;
-  background: radial-gradient(ellipse at var(--model-glint-x, 50%) var(--model-glint-y, 46%), #b291ff52, #737ce824 49%, transparent 72%);
+  background: radial-gradient(ellipse at var(--model-glint-x, 50%) var(--model-glint-y, 46%), #eeeaf42e, #c5c4d611 49%, transparent 72%);
   content: "";
 }
 .hero-model img {
@@ -99,28 +100,27 @@ body { font-size: 1rem; line-height: 1.6; }
 @media (701px <= width < 961px) {
   .hero { min-height: 620px; padding-block: 100px 44px; }
   .hero-model { width: min(32vw, 250px); }
-  .hero h1 { font-size: clamp(2.5rem, 5.5vw, 3.375rem); }
+  .hero .hero-content h1 { font-size: clamp(2.5rem, 5.5vw, 3.375rem); }
 }
 @media (min-width: 961px) {
   .hero {
-    grid-template-columns: minmax(0, 1.52fr) minmax(0, 1fr);
-    column-gap: clamp(14px, 3vw, 44px);
-    padding-inline: clamp(24px, 4vw, 64px);
+    padding-inline: 24px;
   }
-  .hero-model { grid-column: 2; grid-row: 1; width: min(100%, 520px); }
+  .hero-model {
+    position: absolute;
+    inset-inline-end: clamp(-35px, -1.7vw, -16px);
+    inset-block-start: 50%;
+    translate: 0 -44%;
+    width: clamp(250px, 27vw, 405px);
+  }
   .hero-content {
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: stretch;
-    text-align: start;
+    width: min(57%, 52rem);
     container-type: inline-size;
   }
   .hero .hero-content h1 {
     font-size: clamp(2rem, 3.75vw, 4.375rem);
-    font-size: clamp(2rem, 8.25cqi, 4.375rem);
+    font-size: clamp(2rem, 8.25cqi, 4.5rem);
   }
-  .hero-content .hero-summary { margin-inline: 0; text-wrap: pretty; }
-  .hero-content .hero-actions { justify-content: flex-start; }
 }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
   .hero-model img {
@@ -158,7 +158,7 @@ body { font-size: 1rem; line-height: 1.6; }
 .hero-summary {
   margin: clamp(18px, 3vw, 28px) auto 0;
   max-width: 32rem;
-  color: #ded9e6;
+  color: #dedcde;
   font-size: clamp(.875rem, 1.7vw, 1.0625rem);
   line-height: 1.65;
   text-wrap: balance;
@@ -324,7 +324,7 @@ body { font-size: 1rem; line-height: 1.6; }
     border-radius: 19px;
     padding: clamp(18px, 4vw, 28px) 16px 38px;
   }
-  .hero-model { width: clamp(124px, 42vw, 216px); }
+  .hero-model { width: clamp(124px, 40vw, 200px); }
   .hero h1 { font-size: clamp(1.375rem, 6.2vw, 2.625rem); }
   .hero-byline { flex-wrap: wrap; justify-content: center; }
   .work-grid, .archive-grid, .profile-intro-grid { grid-template-columns: minmax(0, 1fr); }

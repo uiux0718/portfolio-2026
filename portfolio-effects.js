@@ -50,5 +50,4 @@ function moveLight(element, prefix) {
   }, { passive: true });
 }
 
-moveLight(document.querySelector('.hero'), '--light');
 document.querySelectorAll('.work-visual, .card-thumb').forEach((artwork) => moveLight(artwork, '--card'));
