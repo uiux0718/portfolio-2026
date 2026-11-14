@@ -3,56 +3,213 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MAGAZINE Y | Digital Experience Designer KIM YE JI</title>
+    <meta name="theme-color" content="#090909">
+    <title>YEJI STUDIO | 김예지 디자인 포트폴리오</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="portfolite.css" />
   </head>
 
   <body>
     <header class="navbar">
       <div class="container nav-flex">
-        <div class="logo">MAGAZINE Y</div>
+        <a class="logo" href="#top"><span class="studio-mark" aria-hidden="true"></span>YEJI STUDIO</a>
         <nav class="menu">
-          <a href="#about">ABOUT</a>
-          <a href="#works">WORKS</a>
-          <a href="#contact" onclick="openContactModal(event)">CONTACT</a>
+          <a href="#works">WORKS</a><a href="#about">ABOUT</a>
+          <a href="#contact" >CONTACT ↗</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="hero-byline"><span aria-hidden="true"></span> 김예지 · Digital Experience Designer</p>
+          <h1 id="hero-title">논리로 흐름을 설계하고 <br>감각으로 경험을 완성하다</h1>
+          <p class="hero-summary">웹, 콘텐츠, 인터페이스에 브랜드의 분위기와 사용자의 흐름을 담습니다.</p>
+          <div class="hero-actions">
+            <a href="#works" class="action action-primary">프로젝트 보기 <span aria-hidden="true">↘</span></a>
+            <a href="#contact" class="action">연락하기 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#works"><span>Selected works</span><span class="scroll-icon" aria-hidden="true"></span><span>Scroll down</span></a>
+      </section>
+
+      <section id="works" class="featured-stories">
         <div class="container">
-          <div class="hero-header-top">
-            <span>ISSUE 01 — RESILIENCE </span>
-            <span>MAY 2026 / KOREA </span>
+          <div class="section-header">
+            <h2 class="label">SELECTED WORKS</h2>
           </div>
 
-          <h1 class="hero-title">
-            논리로 흐름을 설계하고<br />
-            감각으로 경험을 완성하다
-          </h1>
+          <div class="work-grid">
+          <article class="work-item hover-jaksim">
+            <a class="work-visual" href="jaksim_nongjang_case.html" aria-label="작심농장 케이스 스터디">
+              <img src="uidesign2.png" alt="작심농장 앱 디자인" loading="lazy">
+              <span aria-hidden="true">↗</span>
+            </a>
+            <div class="work-meta-block side-jaksim">
+              <span class="work-num">01</span>
+              <span class="work-cat">APP PROJECT</span>
+            </div>
+            <div class="work-content-block">
+              <h3 class="work-title">작심농장 : JAKSIM NONGJANG</h3>
+              <p class="work-desc">
+                습관 기록 흐름을 직관적으로 설계한 UI/UX 기반 앱 프로젝트입니다.
+              </p>
+              <div class="work-tags">#UX_Strategy #UI_Design #App_Service</div>
+              <div class="work-links-flex">
+                <a href="jaksim_nongjang_case.html" class="btn-link">READ CASE STUDY →</a>
+                <a href="https://uiux0718.github.io/zagsim/" target="_blank" rel="noopener" class="btn-link">VIEW APP →</a>
+              </div>
+            </div>
+          </article>
 
-          <div class="hero-sub">
-            <div>
-              <p class="sub-label">CORE VALUE</p>
-              <p>DIGITAL EXPERIENCE DESIGN</p>
+          <article class="work-item hover-ki">
+            <a class="work-visual type-cover ki-cover" href="https://uiux0718.github.io/redesign-project/" target="_blank" rel="noopener" aria-label="KI Entertainment 웹사이트">
+              <strong aria-hidden="true">KI<span>ENTERTAINMENT</span></strong>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <div class="work-meta-block side-ki">
+              <span class="work-num">02</span>
+              <span class="work-cat">WEBSITE REDESIGN PROJECT</span>
             </div>
-            <div>
-              <p class="sub-label">DESIGNER</p>
-              <p>김예지 KIM YE JI</p>
+            <div class="work-content-block">
+              <h3 class="work-title">KI ENTERTAINMENT</h3>
+              <p class="work-desc">
+                다크 테마와 반응형 구조를 중심으로 기존 사이트의 시각 흐름과 사용 경험을 개선한 웹 리디자인 프로젝트입니다.
+              </p>
+              <div class="work-tags">#Web_Design #Dark_Theme #Responsive_Web</div>
+              <div class="work-links-flex">
+                <a href="https://uiux0718.github.io/redesign-project/" target="_blank" rel="noopener" class="btn-link">VIEW SITE →</a>
+              </div>
             </div>
-            <div>
-              <p class="sub-label">PORTFOLIO</p>
-              <p>SELECTED ARCHIVE</p>
+          </article>
+
+          <article class="work-item hover-mood">
+            <a class="work-visual type-cover mood-cover" href="https://onfcompany0718.cafe24.com/" target="_blank" rel="noopener" aria-label="무드바이트 웹사이트">
+              <strong aria-hidden="true">Mood<span>BITE</span></strong>
+              <span aria-hidden="true">↗</span>
+            </a>
+            <div class="work-meta-block side-mood">
+              <span class="work-num">03</span>
+              <span class="work-cat">E-COMMERCE</span>
             </div>
+            <div class="work-content-block">
+              <h3 class="work-title">무드바이트 : MOOD BITE</h3>
+              <p class="work-desc">
+               감정 기반 큐레이션과 브랜드 무드를 연결한 이커머스 프로젝트입니다.
+              </p>
+              <div class="work-tags">#Visual_Branding #Emotion_UX #Cafe24</div>
+              <div class="work-links-flex">
+                <a href="https://onfcompany0718.cafe24.com/" target="_blank" rel="noopener" class="btn-link">VIEW SITE →</a>
+              </div>
+            </div>
+          </article>
+          <article class="work-item service-card">
+            <a class="work-visual" href="https://naepyeon-hanip.myselfopenthedoor.chatgpt.site" target="_blank" rel="noopener" aria-label="내편한입 웹서비스, 방문 권한 필요">
+              <img src="naepyeon-hanip.jpg" alt="내편한입 캐릭터 한칸이" loading="lazy">
+              <span aria-hidden="true">↗</span>
+            </a>
+            <div class="work-meta-block"><span class="work-cat">INTERACTIVE WEB SERVICE</span></div>
+            <div class="work-content-block">
+              <h3 class="work-title">내편한입</h3>
+              <p class="work-desc">오늘의 기분을 고르면 한칸이가 어울리는 간식을 추천하는 웹서비스입니다.</p>
+              <div class="work-links-flex">
+                <a href="https://naepyeon-hanip.myselfopenthedoor.chatgpt.site" target="_blank" rel="noopener" class="btn-link">웹서비스 보기 ↗</a>
+                <span class="access-note">방문 권한 필요</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-item service-card">
+            <a class="work-visual" href="https://ujjuju-small-effort.myselfopenthedoor.chatgpt.site" target="_blank" rel="noopener" aria-label="우쭈쭈 웹서비스, 방문 권한 필요">
+              <img src="ujjuju.jpg" alt="머그컵을 든 우쭈쭈 캐릭터" loading="lazy">
+              <span aria-hidden="true">↗</span>
+            </a>
+            <div class="work-meta-block"><span class="work-cat">INTERACTIVE WEB SERVICE</span></div>
+            <div class="work-content-block">
+              <h3 class="work-title">우쭈쭈</h3>
+              <p class="work-desc">오늘 해낸 작은 일을 한 줄로 남기면 우쭈쭈가 칭찬을 건네는 마음 돌봄 웹서비스입니다.</p>
+              <div class="work-links-flex">
+                <a href="https://ujjuju-small-effort.myselfopenthedoor.chatgpt.site" target="_blank" rel="noopener" class="btn-link">웹서비스 보기 ↗</a>
+                <span class="access-note">방문 권한 필요</span>
+              </div>
+            </div>
+          </article>
           </div>
+
         </div>
       </section>
 
+      <section class="archive-section" aria-labelledby="archive-title">
+        <div class="container">
+          <h2 class="label archive-label" id="archive-title">VISUAL ARCHIVE</h2><div class="archive-grid">
+
+            <a id="crunch" href="crunch.pdf" target="_blank" rel="noopener" class="small-card">
+              <span class="work-num">04</span>
+              <h4>CRUNCHY ATTACK</h4>
+              <p class="work-cat">PROMOTION LANDING PAGE</p>
+              <div class="card-thumb">
+                <img src="attack.png" alt="크런키" />
+              </div>
+              <div class="strategy-summary">
+                실시간 데이터 시각화 & 심리적 CTA 설계
+              </div>
+            </a>
+
+            <a id="jewelry" href="IU.png" target="_blank" rel="noopener" class="small-card">
+              <span class="work-num">05</span>
+              <h4>J.ESTINA JEWELRY</h4>
+              <p class="work-cat">VISUAL CONTENT STRATEGY</p>
+              <div class="card-thumb">
+                <img src="IU.png" alt="제이에스티나" />
+              </div>
+              <div class="strategy-summary">
+                좌(모델) → 우(제품) 시선 흐름 설계
+              </div>
+            </a>
+
+            <a id="tea" href="mango_peach.png" target="_blank" rel="noopener" class="small-card">
+              <span class="work-num">06</span>
+              <h4>MCCOY TEAS: Mango Black Tea</h4>
+              <p class="work-cat">CARD NEWS / BRANDING</p>
+              <div class="card-thumb">
+                <img src="mango_peach.png" alt="맥코이티" />
+              </div>
+              <div class="strategy-summary">
+                프리미엄 홍차 브랜드의 감성을 담아 패키지 중심으로 구성한 SNS 홍보 콘텐츠입니다.
+              </div>
+            </a>
+
+            <a id="candy" href="https://www.youtube.com/shorts/WjxwcVW4DOU" target="_blank" rel="noopener" class="small-card">
+              <span class="work-num">07</span>
+              <h4>MOOD BITE : LEMON CANDY</h4>
+              <p class="work-cat">Short-form Brand Film</p>
+              <div class="card-thumb">
+                <img src="lemon_candy_thumb.png" alt="레몬사탕" />
+              </div>
+              <div class="strategy-summary">
+                감정 기반 큐레이션 쇼핑몰 ‘무드바이트’의 레몬캔디 브랜드 숏폼 콘텐츠입니다. 경쾌한 리듬과 화사한 컬러를 활용해 기분 전환의 경험을 짧고 직관적으로 전달했습니다.
+              </div>
+            </a>
+
+            <a id="biff" href="biff-cardnews.html" class="small-card">
+              <span class="work-num">08</span>
+              <h4>부산국제영화제 카드뉴스</h4>
+              <p class="work-cat">CARD NEWS</p>
+              <div class="card-thumb">
+                <img src="biff/01.webp" alt="" loading="lazy">
+              </div>
+              <div class="strategy-summary">카드뉴스 8장 보기 →</div>
+            </a>
+
+          </div>
+        </div>
+      </section>
       <section id="about" class="profile">
         <div class="container">
           <div class="section-header">
@@ -83,12 +240,12 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="statement">
               <p class="main-statement">
                 감정과 흐름이 자연스럽게 이어지는
                 디지털 경험을 디자인합니다.<br />
-          
+
               </p>
               <p class="sub-statement">
                 웹, 콘텐츠, 인터페이스 안에서 사용자의 시선과 감정 흐름이 자연스럽게 이어지는 경험을 고민합니다.
@@ -98,227 +255,15 @@
           </div>
         </div>
       </section>
-
-      <section id="works" class="featured-stories">
-        <div class="container">
-          <div class="section-header">
-            <span class="label">FEATURED STORIES</span>
-          </div>
-
-          <div class="work-item show hover-jaksim">
-            <div class="work-meta-block side-jaksim">
-              <span class="work-num">01</span>
-              <span class="work-cat">APP PROJECT</span>
-            </div>
-            <div class="work-content-block">
-              <h3 class="work-title">작심농장 : JAKSIM NONGJANG</h3>
-              <p class="work-desc">
-                습관 기록 흐름을 직관적으로 설계한 UI/UX 기반 앱 프로젝트입니다.
-              </p>
-              <div class="work-tags">#UX_Strategy #UI_Design #App_Service</div>
-              <div class="work-links-flex">
-                <a href="jaksim_nongjang_case.html" class="btn-link">READ CASE STUDY →</a>
-                <a href="https://uiux0718.github.io/zagsim/" target="_blank" class="btn-link">VIEW APP →</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="work-item show hover-ki">
-            <div class="work-meta-block side-ki">
-              <span class="work-num">02</span>
-              <span class="work-cat">WEBSITE REDESIGN PROJECT</span>
-            </div>
-            <div class="work-content-block">
-              <h3 class="work-title">KI ENTERTAINMENT</h3>
-              <p class="work-desc">
-                다크 테마와 반응형 구조를 중심으로 기존 사이트의 시각 흐름과 사용 경험을 개선한 웹 리디자인 프로젝트입니다. 
-              </p>
-              <div class="work-tags">#Web_Design #Dark_Theme #Responsive_Web</div>
-              <div class="work-links-flex">
-                <a href="https://uiux0718.github.io/redesign-project/" target="_blank" class="btn-link">VIEW SITE →</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="work-item show hover-mood">
-            <div class="work-meta-block side-mood">
-              <span class="work-num">03</span>
-              <span class="work-cat">E-COMMERCE</span>
-            </div>
-            <div class="work-content-block">
-              <h3 class="work-title">무드바이트 : MOOD BITE</h3>
-              <p class="work-desc">
-               감정 기반 큐레이션과 브랜드 무드를 연결한 이커머스 프로젝트입니다.
-              </p>
-              <div class="work-tags">#Visual_Branding #Emotion_UX #Cafe24</div>
-              <div class="work-links-flex">
-                <a href="https://onfcompany0718.cafe24.com/" target="_blank" class="btn-link">VIEW SITE →</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section class="archive-section">
-        <div class="container">
-          <div class="archive-grid">
-            
-            <a href="crunch.pdf" target="_blank" class="small-card">
-              <span class="work-num">04</span>
-              <h4>CRUNCHY ATTACK</h4>
-              <p class="work-cat">PROMOTION LANDING PAGE</p>
-              <div class="card-thumb">
-                <img src="attack.png" alt="크런키" />
-              </div>
-              <div class="strategy-summary">
-                실시간 데이터 시각화 & 심리적 CTA 설계
-              </div>
-            </a>
-
-            <a href="IU.png" target="_blank" class="small-card">
-              <span class="work-num">05</span>
-              <h4>J.ESTINA JEWELRY</h4>
-              <p class="work-cat">VISUAL CONTENT STRATEGY</p>
-              <div class="card-thumb">
-                <img src="IU.png" alt="제이에스티나" />
-              </div>
-              <div class="strategy-summary">
-                좌(모델) → 우(제품) 시선 흐름 설계
-              </div>
-            </a>
-
-            <a href="mango_peach.png" target="_blank" class="small-card">
-              <span class="work-num">06</span>
-              <h4>MCCOY TEAS: Mango Black Tea</h4>
-              <p class="work-cat">CARD NEWS / BRANDING</p>
-              <div class="card-thumb">
-                <img src="mango_peach.png" alt="맥코이티" />
-              </div>
-              <div class="strategy-summary">
-                프리미엄 홍차 브랜드의 감성을 담아 패키지 중심으로 구성한 SNS 홍보 콘텐츠입니다.
-              </div>
-            </a>
-
-            <a href="https://www.youtube.com/shorts/WjxwcVW4DOU" target="_blank" class="small-card">
-              <span class="work-num">07</span>
-              <h4>MOOD BITE : LEMON CANDY</h4>
-              <p class="work-cat">Short-form Brand Film</p>
-              <div class="card-thumb">
-                <img src="lemon_candy_thumb.png" alt="레몬사탕" />
-              </div>
-              <div class="strategy-summary">
-                감정 기반 큐레이션 쇼핑몰 ‘무드바이트’의 레몬캔디 브랜드 숏폼 콘텐츠입니다. 경쾌한 리듬과 화사한 컬러를 활용해 기분 전환의 경험을 짧고 직관적으로 전달했습니다.
-              </div>
-            </a>
-
-          </div>
-        </div>
-      </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <div class="container">
-        <p>© 2026 MAGAZINE Y / DESIGNED BY KIM YE JI. ALL RIGHTS RESERVED.</p>
+        <span class="label">CONTACT / KIM YE JI</span>
+        <h2>LET’S TALK<span>.</span></h2>
+        <div class="contact-links"><a href="mailto:banrose12@naver.com">banrose12@naver.com ↗</a><a href="https://github.com/uiux0718/zagsim" target="_blank" rel="noopener">GitHub ↗</a></div>
+        <p>© 2026 YEJI STUDIO · KIM YE JI</p>
       </div>
     </footer>
-
-    <div id="contactModal" class="contact-modal" onclick="closeContactModalOutside(event)">
-      <div class="modal-content">
-        <button class="modal-close-btn" onclick="closeContactModal()">&times;</button>
-        <h2 class="modal-title">CONTACT ME</h2>
-        <div class="modal-info-container">
-          <div class="info-row">
-            <span class="info-label">e-mail</span>
-            <span class="info-value">banrose12@naver.com</span>
-          </div>
-        
-          <div class="info-row github-row">
-            <div class="github-icon-wrapper">
-              <svg class="github-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-              </svg>
-            </div>
-            <a href="https://github.com/uiux0718/zagsim" target="_blank" class="info-value link-underlined">
-              github.com/uiux0718/zagsim
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        /* Intersection Observer - Fade In Animation */
-        const fadeObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("show");
-              }
-            });
-          },
-          { threshold: 0.1 },
-        );
-
-        document.querySelectorAll(".work-item, .small-card").forEach((item) => {
-          if (item) fadeObserver.observe(item);
-        });
-
-        /* Intersection Observer - Navigation Menu Active Triggers */
-        const navItems = document.querySelectorAll('.menu a:not([href="#contact"])');
-        const sections = document.querySelectorAll("#about, #works");
-
-        const menuObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                const id = entry.target.getAttribute("id");
-                navItems.forEach((item) => {
-                  item.classList.remove("active");
-                  if (item.getAttribute("href") === `#${id}`) {
-                    item.classList.add("active");
-                  }
-                });
-              }
-            });
-          },
-          {
-            root: null,
-            rootMargin: "-20% 0px -60% 0px",
-            threshold: 0,
-          },
-        );
-
-        sections.forEach((section) => {
-          if (section) menuObserver.observe(section);
-        });
-      });
-
-      /* Modal Popups Controller Logic */
-      function openContactModal(event) {
-        if (event) event.preventDefault();
-        const modal = document.getElementById("contactModal");
-        if (modal) {
-          modal.classList.add("active");
-          document.body.style.overflow = "hidden";
-        }
-      }
-
-      function closeContactModal() {
-        const modal = document.getElementById("contactModal");
-        if (modal) {
-          modal.classList.remove("active");
-          document.body.style.overflow = "auto";
-        }
-      }
-
-      function closeContactModalOutside(event) {
-        const modal = document.getElementById("contactModal");
-        if (modal && event.target === modal) {
-          closeContactModal();
-        }
-      }
-    </script>
   </body>
 </html>
