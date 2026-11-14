@@ -4,7 +4,7 @@
   --text: #f5f4f2;
   --muted: #aaa9a6;
   --line: #30302f;
-  --accent: #f5f4f2;
+  --accent: #e1d1ff;
   --pad: clamp(18px, 5vw, 86px);
 }
 
@@ -176,10 +176,9 @@ html { scroll-behavior: auto; }
 .work-visual img, .card-thumb img {
   position: absolute;
   inset: 0;
-  filter: grayscale(1) brightness(.88);
 }
 .work-visual img { object-position: center 28%; }
-.work-visual img.ujjuju-thumbnail { object-fit: contain; object-position: center; filter: none; }
+.work-visual img.ujjuju-thumbnail { object-fit: contain; object-position: center; }
 .hover-jaksim .work-visual img { object-position: center 5%; }
 .work-visual > span {
   position: absolute;

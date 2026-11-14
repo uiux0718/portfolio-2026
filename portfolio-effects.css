@@ -1,0 +1,215 @@
+.navbar {
+  border-bottom: 1px solid #ffffff24;
+  background: linear-gradient(110deg, #1d14346b, #0a0a10a0);
+  border-radius: 18px 18px 0 0;
+}
+
+.studio-mark {
+  background: linear-gradient(140deg, #fff 12%, #cdacff 58%, #8aebfa);
+}
+
+.hero {
+  border-color: #9979d966;
+  box-shadow: 0 22px 85px -44px #a783ff65;
+}
+
+.hero-art {
+  background:
+    radial-gradient(ellipse at center, #07040fd9 0, #0a061a65 55%, #06050b35 100%),
+    url("silver-satin.jpg") center / cover no-repeat;
+}
+
+.hero-art::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    radial-gradient(ellipse at var(--light-x, 20%) var(--light-y, 19%), #9754ffb3, transparent 48%),
+    radial-gradient(ellipse at 94% 74%, #2a8cf1a8, transparent 48%),
+    radial-gradient(ellipse at 32% 115%, #eb527f9c, transparent 56%);
+  mix-blend-mode: screen;
+}
+
+.hero h1 {
+  color: #f8f2ff;
+  text-shadow: 0 4px 30px #110b2b, 0 14px 56px #100721;
+}
+
+.hero-byline {
+  border-color: #ae97e462;
+  background: #140e28bf;
+}
+
+.action-primary {
+  background: linear-gradient(110deg, #eee3ff, #b0dffc);
+  color: #181123;
+  border-color: transparent;
+  box-shadow: 0 6px 24px #b98aff46;
+}
+
+.work-item, .small-card {
+  --card-glow: #ac7bf8;
+  background:
+    radial-gradient(ellipse at 100% 0, color-mix(in srgb, var(--card-glow) 13%, transparent), transparent 62%),
+    #14121a;
+  transition: transform .37s ease, border-color .28s ease, box-shadow .37s ease;
+}
+
+.hover-jaksim { --card-glow: #80d5ab; }
+.hover-ki { --card-glow: #a38cff; }
+.hover-mood, #jewelry { --card-glow: #f696c7; }
+#ease-meal, #tea { --card-glow: #ffae68; }
+#naepyeon-hanip { --card-glow: #7bd8ff; }
+#ujjuju { --card-glow: #c2a3f5; }
+#crunch, #candy { --card-glow: #f6d960; }
+#biff { --card-glow: #ff735b; }
+
+.ki-cover {
+  background: radial-gradient(ellipse at 15% 85%, #413573, transparent 70%), #171321;
+}
+
+.mood-cover {
+  background: radial-gradient(ellipse at 75% 0, #743649, transparent 77%), #291521;
+}
+
+#ujjuju .work-visual {
+  background: radial-gradient(ellipse at 50% 65%, #5a446e, #251d35 70%);
+}
+
+.work-visual img, .card-thumb img, .type-cover strong {
+  transition: transform .55s cubic-bezier(.2,.7,.25,1);
+}
+
+.work-visual::after, .card-thumb::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(circle at var(--card-x, 50%) var(--card-y, 50%), #ffffff24, transparent 58%),
+    linear-gradient(110deg, transparent 32%, #ffffff2e 48%, transparent 66%) -120% 0 / 240% 100% no-repeat;
+  transition: opacity .28s ease;
+}
+
+.work-visual > span {
+  transition: color .25s ease, background .25s ease, transform .32s ease;
+}
+
+.work-item:focus-within, .small-card:focus-visible {
+  border-color: var(--card-glow);
+}
+
+.work-item:focus-within .work-visual > span, .work-item:active .work-visual > span {
+  color: #16101d;
+  background: var(--card-glow);
+}
+
+.small-card:active { border-color: var(--card-glow); }
+
+.menu a, .btn-link, .contact-links a {
+  position: relative;
+}
+
+.menu a::after, .btn-link::after, .contact-links a::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: linear-gradient(90deg, #d6adff, #78ddf5);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .24s ease;
+}
+
+:is(.menu a, .btn-link, .contact-links a):focus-visible::after {
+  transform: scaleX(1);
+}
+
+.profile {
+  background:
+    radial-gradient(ellipse at 0 70%, #34214b, transparent 66%),
+    #17131f;
+}
+
+.footer {
+  background:
+    radial-gradient(ellipse at 74% 100%, #262149, transparent 65%),
+    radial-gradient(ellipse at 10% 80%, #30203d, transparent 66%),
+    #0c0a11;
+}
+
+.scroll-progress {
+  position: fixed;
+  z-index: 6;
+  inset: 0 0 auto;
+  height: 3px;
+  pointer-events: none;
+  background: linear-gradient(90deg, #a887fd, #e7a8fc 45%, #75ddfc);
+  transform: scaleX(var(--scroll-progress, 0));
+  transform-origin: left;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body {
+    --cursor-y: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M5 4l9 10 9-10M14 14v10' fill='none' stroke='%23110b23' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M5 4l9 10 9-10M14 14v10' fill='none' stroke='%23e3cbff' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    --cursor-link: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Ccircle cx='14' cy='14' r='13' fill='%23170e28' stroke='%23d2adff' stroke-width='1.4'/%3E%3Cpath d='M7.5 7l6.5 7.5L20.5 7M14 14.5V21' fill='none' stroke='%23f8e9ff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    cursor: var(--cursor-y) 14 14, auto;
+  }
+
+  a { cursor: var(--cursor-link) 14 14, pointer; }
+
+  .work-item:hover, .small-card:hover {
+    transform: translateY(-5px);
+    border-color: color-mix(in srgb, var(--card-glow) 75%, #282332);
+    box-shadow: 0 16px 40px -24px var(--card-glow), 0 0 22px -12px var(--card-glow);
+  }
+
+  .work-item:hover .work-visual img, .small-card:hover .card-thumb img, .work-item:hover .type-cover strong {
+    transform: scale(1.065);
+  }
+
+  .work-item:hover .work-visual > span {
+    transform: translate(2px, -2px) rotate(9deg);
+    background: var(--card-glow);
+    color: #16101d;
+  }
+
+  .work-item:hover .work-visual::after, .small-card:hover .card-thumb::after {
+    opacity: 1;
+    animation: thumbnail-shine .72s ease-out both;
+  }
+
+  :is(.menu a, .btn-link, .contact-links a):hover::after { transform: scaleX(1); }
+}
+
+.is-revealing {
+  animation: work-reveal .57s cubic-bezier(.2,.7,.3,1) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+@keyframes work-reveal {
+  from { opacity: .25; translate: 0 22px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@keyframes thumbnail-shine {
+  from { background-position: 0 0, 120% 0; }
+  to { background-position: 0 0, -120% 0; }
+}
+
+@media (max-width: 700px) {
+  .navbar { border-radius: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .is-revealing, .work-item:hover .work-visual::after, .small-card:hover .card-thumb::after {
+    animation: none;
+  }
+
+  .work-item:hover, .small-card:hover, .work-item:hover .work-visual img,
+  .small-card:hover .card-thumb img, .work-item:hover .type-cover strong,
+  .work-item:hover .work-visual > span { transform: none; }
+}
