@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>우쭈쭈</title>
+<style>
+@font-face{font-family:Hippie;src:url("https://cdn.jsdelivr.net/gh/Project-Noonnu/2610081905@hippie/hippie/hippie_%ED%9E%88%ED%94%BC%EC%B2%B4.woff2") format("woff2");font-display:swap}
+@font-face{font-family:Ryurue;src:url("https://cdn.jsdelivr.net/gh/projectnoonnu/2405-2@1.0/Ownglyph_ryurue-Rg.woff2") format("woff2");font-weight:400;font-display:swap}
+*{box-sizing:border-box}
+body{margin:0;background:#F1F7F7;color:#314545;font:19px/1.55 Ryurue,"맑은 고딕",sans-serif}
+main{max-width:560px;min-height:100dvh;margin:auto;padding:24px clamp(16px,5vw,32px);background:#D5E5E5}
+header{text-align:center}
+header img{width:140px;height:auto}
+h1,h2,button{font-family:Hippie,Ryurue,"맑은 고딕",sans-serif}
+h1{margin:0;font-size:2rem}
+h2{margin:0 0 10px;font-size:1.5rem}
+header p{margin:5px 0 18px}
+nav,.suggestions{display:flex;flex-wrap:wrap;gap:8px}
+nav button{flex:1;min-width:120px}
+button{min-height:44px;border:1px solid #5D6B6B;border-radius:999px;background:#F1F7F7;color:inherit;padding:8px 15px;font-size:1rem;cursor:pointer}
+button[aria-pressed=true],button[type=submit]{background:#F7CBCA;border-color:#5D6B6B}
+button:hover{background:#DDD3D3}
+button:focus-visible,textarea:focus-visible{outline:2px solid #5D6B6B;outline-offset:3px}
+section{margin:16px 0 0;padding:clamp(14px,4vw,22px);border-radius:24px;background:#F1F7F7;box-shadow:0 5px 14px #5d6b6b22}
+label{display:block}
+textarea{width:100%;min-height:82px;margin:6px 0 8px;padding:10px;border:1px solid #5D6B6B;border-radius:15px;background:#fff;font:inherit;color:inherit;resize:vertical}
+form button{width:100%}
+ul{display:grid;gap:8px;margin:14px 0 0;padding:0;list-style:none}
+li{background:#BDD7D8;border-radius:16px;padding:10px 12px;overflow-wrap:anywhere;white-space:pre-wrap}
+li p{margin:4px 0 0}
+#chat-log .user{background:#F7CBCA}
+small{display:block;margin:0 0 10px}
+.suggestions{margin:10px 0}
+.quick-actions{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px}
+.quick-actions button,.chat-actions button{font-size:.9rem}
+.chat-actions{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+#vent-panel p{font-size:.9rem}
+#vent-panel button{width:100%}
+body{background:#f1f8ef;color:#3b352d;font-family:Inter,"맑은 고딕",sans-serif}
+main{max-width:720px;background:transparent;padding-bottom:52px}
+header{position:relative;isolation:isolate;overflow:hidden;border-radius:32px;padding:18px 16px 24px;margin-bottom:18px;background:radial-gradient(ellipse at 50% 37%,#fff4bd,transparent 56%),linear-gradient(145deg,#e0f4e0,#e5e3fb)}
+.brand{display:block;width:104px;margin:auto}
+header .mascot{display:block;width:min(66%,285px);margin:2px auto;filter:drop-shadow(0 12px 16px #78679e35);animation:float 4s ease-in-out infinite}
+header h1{font-size:clamp(1.4rem,5vw,2.2rem)}
+header p{font-size:.94rem;margin:8px 0 0}
+.account{display:flex;justify-content:flex-end;gap:12px;align-items:center;margin-bottom:10px;font-size:.85rem}
+.account a{color:#493952;text-underline-offset:4px;padding:10px 0}
+.account [hidden]{display:none}
+section{background:#fffcf5;border:1px solid #dfdecf;animation:arrive .3s ease-out}
+li{background:#e0f4e0}
+button{background:#fffdf7;border-color:#958b7c;transition:background .2s,transform .2s,box-shadow .2s}
+button:active{transform:scale(.96)}
+button[aria-pressed=true],button[type=submit]{background:#ffcfbf}
+#spice[aria-pressed=true]{background:#ffe0e5;color:#8e2544;box-shadow:0 0 0 4px #e57e9c38}
+#chat[data-spicy=true]{background:#fff0f4;border-color:#eeb4c6}
+#chat[data-spicy=true] .bot{background:#f9d4df}
+#spice-status{margin:6px 0 12px;font-size:.88rem}
+#chat img{width:88px}
+.new-message{animation:arrive .35s ease-out}
+.spark{position:fixed;z-index:2;pointer-events:none;left:var(--x);top:var(--y);color:var(--color);font-size:1.2rem;animation:spark .75s ease-out forwards}
+@keyframes float{50%{transform:translateY(-8px) rotate(-2deg)}}
+@keyframes arrive{from{opacity:0;transform:translateY(10px)}}
+@keyframes spark{to{opacity:0;transform:translate(var(--dx),var(--dy)) rotate(90deg) scale(.4)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<main>
+<div class="account" aria-label="계정">
+  <a id="sign-in" href="/signin-with-chatgpt?return_to=%2F" target="_top" hidden>ChatGPT로 로그인</a>
+  <a id="sign-out" href="/signout-with-chatgpt?return_to=%2F" target="_top" hidden>로그아웃</a>
+</div>
+<header>
+  <img class="brand" src="ujjuju-brand.png" alt="우쭈쭈">
+  <img class="mascot" src="ujjuju-3d.png" alt="구름 위에서 파란 머그컵을 든 3D 우쭈쭈">
+  <h1>오늘의 나를 칭찬해요</h1>
+  <p>오늘 애쓴 너에게, 다정한 한마디.</p>
+</header>
+<nav aria-label="화면"><button data-screen="record" aria-pressed="true">오늘의 기록</button><button data-screen="chat" aria-pressed="false">우쭈쭈 대화</button></nav>
+<section id="record" aria-labelledby="record-title">
+<h2 id="record-title">작은 노력도 좋아</h2>
+<form id="record-form"><label for="effort">오늘 어떤 일을 해냈어?</label><div id="quick-efforts" class="quick-actions" role="group" aria-label="빠른 기록"></div><textarea id="effort" required></textarea><button type="submit">기록하기</button></form>
+<ul id="records" aria-label="작은 노력과 칭찬" aria-live="polite"></ul>
+</section>
+<section id="chat" aria-labelledby="chat-title" hidden>
+<h2 id="chat-title">우쭈쭈랑 얘기해</h2>
+<img src="ujjuju-3d.png" width="88" alt="머그컵을 든 우쭈쭈">
+<small>준비된 답변으로 대화를 체험할 수 있어.</small>
+<div class="chat-actions" role="group" aria-label="대화 방식">
+  <button id="talk-mode" type="button" aria-pressed="true">얘기할래</button>
+  <button id="side-mode" type="button" aria-pressed="false">내 편 들어줘</button>
+  <button id="vent-mode" type="button" aria-pressed="false">다 쏟아낼래</button>
+</div>
+<div id="vent-panel" hidden>
+  <label for="vent-text">여기에 하고 싶은 말을 써봐.</label>
+  <textarea id="vent-text"></textarea>
+  <button id="vent-clear" type="button">비우기</button>
+  <p id="vent-status" role="status"></p>
+</div>
+<div id="chat-conversation">
+<button id="spice" type="button" aria-pressed="false" aria-describedby="spice-status">🍒 정신체리 매운맛</button>
+<p id="spice-status" role="status">다정한 답변을 보내요.</p>
+<ul id="chat-log" aria-label="대화" aria-live="polite"></ul>
+<div class="suggestions" aria-label="대화 예시"></div>
+<form id="chat-form"><label for="message">우쭈쭈에게 하고 싶은 말</label><textarea id="message" required></textarea><button type="submit">보내기</button></form>
+</div>
+</section>
+</main>
+<script>
+const mockData = {
+  quickEfforts: ['💧 물 한 잔', '🫧 설거지', '📖 책 한 페이지', '👋 먼저 인사'],
+  sideReply: '그때 바로 말하지 못했어도 마음에 남을 수 있어. 어떤 말이나 행동이 가장 속상했어?',
+  efforts: [
+    ['피곤했지만 물 한 잔 마셨어.', '내 몸을 챙기는 데 잠깐 시간을 냈네. 그 한 모금도 너를 돌본 일이야.'],
+    ['미뤄둔 설거지를 했어.', '마음에 걸리던 일에 손을 댔네. 오늘 네가 해낸 일이 하나 생겼어.'],
+    ['읽던 책을 한 페이지 펼쳤어.', '한 페이지를 펼친 그 순간도 네가 내준 시간이야.'],
+    ['긴장됐지만 먼저 인사했어.', '긴장되는 와중에 먼저 인사했네. 그 작은 용기를 알아주고 싶어.']
+  ],
+  newPraise: '작아 보이는 노력도 알아봐 줄 만해. 오늘 그 순간을 한 줄로 남겨줘서 좋아.',
+  greeting: '안녕, 나는 우쭈쭈야. 오늘 기억에 남는 일이 있었어?',
+  spicy: [
+    '잠깐, 그 일 때문에 하루 전체에 낙제점을 줄 필요는 없어. 지금 손댈 수 있는 것부터 하나만 골라보자.',
+    '머릿속 회의가 너무 길어졌어. 당장 답이 안 나오는 건 잠깐 내려두고, 제일 신경 쓰이는 한 가지만 말해봐.',
+    '속상했다고 말하는 데 허락은 필요 없어. 그중 뭐가 제일 마음에 걸렸는지부터 짚어보자.'
+  ],
+  urgent: '지금은 네 안전이 먼저야. 당장 다칠 위험이 있다면 현지 응급 서비스에 연락하고, 가까운 사람에게 지금 곁에 있어 달라고 말해줘.',
+  replies: [
+    {prompt:'오늘 많이 지쳤어', match:/지쳤|피곤|힘들/, text:'오늘은 애쓴 너한테 잠깐 쉬어도 된다고 말해주고 싶어. 뭐가 제일 힘들었어?'},
+    {prompt:'작은 일 하나 해냈어', match:/해냈|해냈어|잘했/, text:'그 작은 일도 네가 해낸 거야. 어떤 일이었는지 들려줄래?'}
+  ],
+  followups: ['이야기해 줘서 고마워. 그때 마음은 어땠어?', '천천히 말해도 돼. 지금 네가 듣고 싶은 말은 뭐야?']
+};
+
+const records = document.querySelector('#records');
+const chatLog = document.querySelector('#chat-log');
+let followup = 0;
+let spicyReply = 0;
+let spicy = false;
+let chatMode = 'talk';
+const modeButtons = ['talk', 'side', 'vent'].map(mode => document.getElementById(mode + '-mode'));
+const ventText = document.querySelector('#vent-text');
+const ventStatus = document.querySelector('#vent-status');
+modeButtons.forEach((button, index) => button.addEventListener('click', () => {
+  chatMode = ['talk', 'side', 'vent'][index];
+  modeButtons.forEach(item => item.setAttribute('aria-pressed', item === button));
+  document.querySelector('#vent-panel').hidden = chatMode !== 'vent';
+  document.querySelector('#chat-conversation').hidden = chatMode === 'vent';
+}));
+document.querySelector('#vent-clear').addEventListener('click', () => {
+  ventText.value = '';
+  ventStatus.textContent = '비웠어.';
+  ventText.focus();
+});
+ventText.addEventListener('input', () => { ventStatus.textContent = ''; });
+const spiceButton = document.querySelector('#spice');
+const hosted = location.protocol === 'https:' && location.hostname.endsWith('.chatgpt.site');
+if (hosted) {
+  document.querySelector('#sign-in').hidden = false;
+  document.querySelector('#sign-out').hidden = false;
+}
+
+function celebrate(button) {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const rect = button.getBoundingClientRect();
+  const colors = ['#dd648b', '#7c65b4', '#b97c18', '#39856a'];
+  for (let index = 0; index < 12; index++) {
+    const angle = index * Math.PI / 6;
+    const spark = document.createElement('span');
+    spark.className = 'spark';
+    spark.setAttribute('aria-hidden', 'true');
+    spark.textContent = spicy && button === spiceButton ? '🍒' : '✦';
+    spark.style.setProperty('--x', `${rect.left + rect.width / 2}px`);
+    spark.style.setProperty('--y', `${rect.top + rect.height / 2}px`);
+    spark.style.setProperty('--dx', `${Math.cos(angle) * 88}px`);
+    spark.style.setProperty('--dy', `${Math.sin(angle) * 68}px`);
+    spark.style.setProperty('--color', colors[index % colors.length]);
+    spark.addEventListener('animationend', () => spark.remove(), {once:true});
+    document.body.append(spark);
+  }
+}
+
+spiceButton.addEventListener('click', () => {
+  spicy = !spicy;
+  spiceButton.setAttribute('aria-pressed', spicy);
+  document.querySelector('#chat').dataset.spicy = spicy;
+  document.querySelector('#spice-status').textContent = spicy
+    ? '다음 답변부터 정신체리 매운맛으로 이야기해요.'
+    : '다정한 답변을 보내요.';
+  if (spicy) celebrate(spiceButton);
+});
+
+function addRecord(effort, praise, latest = false) {
+  const item = document.createElement('li');
+  const title = document.createElement('strong');
+  const message = document.createElement('p');
+  title.textContent = effort;
+  message.textContent = praise;
+  item.append(title, message);
+  if (latest) {
+    item.classList.add('new-message');
+    records.prepend(item);
+  }
+  else records.append(item);
+}
+
+function addChat(speaker, text) {
+  const item = document.createElement('li');
+  item.className = speaker === '나' ? 'user' : 'bot';
+  item.classList.add('new-message');
+  item.textContent = speaker + ' · ' + text;
+  chatLog.append(item);
+}
+
+function sendChat(text) {
+  addChat('나', text);
+  if (/죽고\s*싶|자해하고\s*싶|죽어버리고\s*싶|목숨을\s*끊/.test(text)) {
+    addChat('우쭈쭈', mockData.urgent);
+    return;
+  }
+  if (spicy) {
+    addChat('정신체리', mockData.spicy[spicyReply++ % mockData.spicy.length]);
+    return;
+  }
+  if (chatMode === 'side') {
+    addChat('우쭈쭈', mockData.sideReply);
+    return;
+  }
+  const reply = mockData.replies.find(entry => entry.match.test(text));
+  addChat('우쭈쭈', reply?.text ?? mockData.followups[followup++ % mockData.followups.length]);
+}
+
+mockData.efforts.forEach(([effort, praise]) => addRecord(effort, praise));
+mockData.quickEfforts.forEach((label, index) => {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.textContent = label;
+  button.addEventListener('click', () => {
+    const effort = document.querySelector('#effort');
+    effort.value = mockData.efforts[index][0];
+    effort.focus();
+  });
+  document.querySelector('#quick-efforts').append(button);
+});
+addChat('우쭈쭈', mockData.greeting);
+mockData.replies.forEach(({prompt}) => {
+  const button = document.createElement('button');
+  button.textContent = prompt;
+  button.addEventListener('click', () => sendChat(prompt));
+  document.querySelector('.suggestions').append(button);
+});
+
+const tabs = document.querySelectorAll('[data-screen]');
+tabs.forEach(tab => tab.addEventListener('click', () => {
+  tabs.forEach(button => {
+    const selected = button === tab;
+    button.setAttribute('aria-pressed', selected);
+    document.getElementById(button.dataset.screen).hidden = !selected;
+  });
+}));
+
+function onSubmit(id, callback) {
+  document.getElementById(id).addEventListener('submit', event => {
+    event.preventDefault();
+    const input = event.currentTarget.querySelector('textarea');
+    const text = input.value.trim();
+    if (text) {
+      callback(text);
+      input.value = '';
+    }
+    input.focus();
+  });
+}
+onSubmit('record-form', text => {
+  addRecord(text, mockData.newPraise, true);
+  celebrate(document.querySelector('#record-form button'));
+});
+onSubmit('chat-form', sendChat);
+</script>
+</body>
+</html>

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="portfolite.css" />
     <link rel="stylesheet" href="portfolio-effects.css" />
     <script src="portfolio-effects.js" defer></script>
+    <script src="studio-model.js" defer></script>
   </head>
 
   <body>
@@ -33,6 +34,9 @@
     <main>
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero-art" aria-hidden="true"></div>
+        <figure class="hero-model" data-studio-model aria-hidden="true">
+          <img src="studio-model.svg" alt="" width="560" height="560" fetchpriority="high">
+        </figure>
         <div class="hero-content">
           <p class="hero-byline"><span aria-hidden="true"></span> 김예지 · Digital Experience Designer</p>
           <h1 id="hero-title">
@@ -129,7 +133,7 @@
           </article>
 
           <article class="work-item service-card" id="naepyeon-hanip">
-            <a class="work-visual" href="https://naepyeon-hanip.myselfopenthedoor.chatgpt.site" target="_blank" rel="noopener" aria-label="내편한입 웹서비스, 방문 권한 필요">
+            <a class="work-visual" href="apps/naepyeon-hanip/" target="_blank" rel="noopener" aria-label="내편한입 웹서비스">
               <img src="naepyeon-hanip.jpg" alt="내편한입 캐릭터 한칸이" loading="lazy">
             </a>
             <div class="work-meta-block"><span class="work-cat">INTERACTIVE WEB SERVICE</span></div>
@@ -137,14 +141,13 @@
               <h3 class="work-title">내편한입</h3>
               <p class="work-desc">오늘의 기분을 고르면 한칸이가 어울리는 간식을 추천하는 웹서비스입니다.</p>
               <div class="work-links-flex">
-                <a href="https://naepyeon-hanip.myselfopenthedoor.chatgpt.site" target="_blank" rel="noopener" class="btn-link">웹서비스 보기</a>
-                <span class="access-note">방문 권한 필요</span>
+                <a href="apps/naepyeon-hanip/" target="_blank" rel="noopener" class="btn-link">웹서비스 보기</a>
               </div>
             </div>
           </article>
 
           <article class="work-item service-card" id="ujjuju">
-            <a class="work-visual" href="https://ujjuju-small-effort.myselfopenthedoor.chatgpt.site" target="_blank" rel="noopener" aria-label="우쭈쭈 웹서비스, 방문 권한 필요">
+            <a class="work-visual" href="apps/ujjuju/" target="_blank" rel="noopener" aria-label="우쭈쭈 웹서비스">
               <img class="ujjuju-thumbnail" src="ujjuju-cutout.png" alt="머그컵을 든 우쭈쭈 캐릭터" width="1357" height="1159" loading="lazy">
             </a>
             <div class="work-meta-block"><span class="work-cat">INTERACTIVE WEB SERVICE</span></div>
@@ -152,8 +155,7 @@
               <h3 class="work-title">우쭈쭈</h3>
               <p class="work-desc">오늘 해낸 작은 일을 한 줄로 남기면 우쭈쭈가 칭찬을 건네는 마음 돌봄 웹서비스입니다.</p>
               <div class="work-links-flex">
-                <a href="https://ujjuju-small-effort.myselfopenthedoor.chatgpt.site" target="_blank" rel="noopener" class="btn-link">웹서비스 보기</a>
-                <span class="access-note">방문 권한 필요</span>
+                <a href="apps/ujjuju/" target="_blank" rel="noopener" class="btn-link">웹서비스 보기</a>
               </div>
             </div>
           </article>
