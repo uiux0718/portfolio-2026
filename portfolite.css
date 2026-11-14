@@ -179,6 +179,7 @@ html { scroll-behavior: auto; }
   filter: grayscale(1) brightness(.88);
 }
 .work-visual img { object-position: center 28%; }
+.work-visual img.ujjuju-thumbnail { object-fit: contain; object-position: center; filter: none; }
 .hover-jaksim .work-visual img { object-position: center 5%; }
 .work-visual > span {
   position: absolute;
