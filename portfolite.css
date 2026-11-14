@@ -30,11 +30,11 @@ html { scroll-behavior: auto; }
   white-space: nowrap;
 }
 .studio-mark {
-  width: 16px;
-  height: 16px;
-  background: linear-gradient(135deg, #fff, #616161);
-  border-radius: 50% 50% 5px 5px;
-  clip-path: polygon(0 0, 45% 0, 50% 38%, 55% 0, 100% 0, 73% 54%, 73% 100%, 27% 100%, 27% 54%);
+  flex: none;
+  width: 30px;
+  height: 40px;
+  border-radius: 6px;
+  background: #fff url("yeji-studio-logo.jpg") center 38% / 118px auto no-repeat;
 }
 .menu { display: flex; gap: clamp(12px, 2.6vw, 34px); color: var(--muted); }
 .menu a:last-child { color: var(--text); }
