@@ -1,194 +1,28 @@
 <!doctype html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="우리 학교를 응원하고 크런키 트럭을 소환하는 대학생 캠페인">
-<title>CRUNCHY ATTACK | YEJI STUDIO</title>
-<style>
-:root{--ink:#151313;--yellow:#ffcf00;--orange:#ff5000;--red:#d70a32;--paper:#f7f6f2;color-scheme:light}
-*{box-sizing:border-box}body{margin:0;background:var(--ink);color:#fff;font:16px/1.55 'Inter','Malgun Gothic',system-ui,sans-serif;word-break:keep-all}h1,h2,h3,p,figure{margin:0}a{color:inherit}button,input{font:inherit}button{cursor:pointer}img{display:block;max-width:100%}section{scroll-margin-top:20px}.wrap{width:min(100% - 40px,1050px);margin-inline:auto}.pad{padding:clamp(55px,8vw,112px) 0}h2{font-size:clamp(27px,5vw,54px);line-height:1.15;letter-spacing:-.065em}.button{display:inline-flex;justify-content:center;align-items:center;min-height:48px;padding:10px 25px;border:2px solid transparent;border-radius:5px;background:var(--red);color:white;text-decoration:none;font-weight:900}.button:hover{filter:brightness(.92)}:focus-visible{outline:3px solid #0877da;outline-offset:4px}.light{background:white;color:var(--ink)}.hero{position:relative;display:flex;min-height:clamp(520px,57vw,880px);text-align:center;background:linear-gradient(180deg,#05070d88,transparent 50%,#070506b0),url("crunchy/truck-hero.webp") center center / cover}.hero .wrap{display:flex;align-items:center;flex-direction:column;padding:clamp(42px,6vw,95px) 0 45px}.hero h1{font-size:clamp(35px,7vw,102px);line-height:1.05;letter-spacing:-.075em;text-shadow:0 4px 18px #000;font-weight:950}.clock{color:#fff3a6;margin-top:12px;font-weight:900}.hero-action{margin-top:auto}.hero-action p{font-size:clamp(17px,3vw,28px);font-weight:850;text-shadow:0 2px 9px #000;margin-bottom:10px}.hero .button{min-width:200px}.intro{text-align:center}.banner{background:var(--yellow);color:#151313;padding:15px;font-size:clamp(19px,3vw,33px);font-weight:950;border-radius:3px}.intro p{font-size:clamp(16px,2.2vw,23px);font-weight:800;margin-top:22px}.gold{color:var(--yellow)}.rank-heading{display:flex;flex-wrap:wrap;align-items:center;gap:12px 38px;margin-top:65px}.rank-heading p{font-weight:900;line-height:1.3}.hot{color:var(--orange)}.chart{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(10px,4vw,44px);text-align:center;margin-top:32px}.plot{height:clamp(145px,23vw,300px);display:flex;align-items:flex-end;justify-content:center;border-bottom:1px solid #ffffff35}.bar{width:min(58%,135px);height:var(--height);background:var(--orange);position:relative}.bar strong{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);white-space:nowrap}.bar strong span{color:var(--yellow)}.chart figcaption{margin-top:12px;font-weight:850}.chart small{display:block;color:#e0d8d8}.rank-call{margin:36px 0 16px;font-size:clamp(17px,2.6vw,26px);font-weight:900}.actions{display:flex;gap:9px;flex-wrap:wrap}.benefits{background:var(--yellow);color:#1b1400}.benefits h3{margin-top:20px;font-size:clamp(18px,3vw,28px)}.perks{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px;font-weight:900}.perks span{background:#171313;color:white;padding:13px 19px;border-radius:4px}.coupon{display:grid;grid-template-columns:1fr minmax(100px,290px);align-items:center;gap:16px;margin-top:24px}.coupon h3{margin-top:0}.steps{background:linear-gradient(#08080735,#08080785),url("crunchy/steps-background.webp") center / cover}.steps h2{display:inline-block;background:#fff;color:var(--ink);padding:12px 18px}.step-list{list-style:none;margin:30px auto 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:840px}.step-list li{min-height:170px;background:var(--orange);color:#231000;border-radius:50%;aspect-ratio:1;display:grid;justify-items:center;align-content:center;gap:7px;text-align:center;padding:12px}.step-list b{line-height:1.2}.step-list img{width:40px;border-radius:50%}.vote{background:linear-gradient(#ffffffd1,#ffffffd1),url("crunchy/vote-background.webp") center / 560px;color:var(--ink)}.vote h2{text-align:center}.search{max-width:640px;margin:24px auto 0}.search label{display:block;font-weight:800;margin-bottom:7px}.search input{width:100%;min-height:48px;border:1px solid #625d60;border-radius:5px;background:#fff;padding:10px 14px;color:inherit}.schools-title{margin-top:21px;font-weight:900}.schools{display:flex;flex-wrap:wrap;gap:9px;margin:10px 0 14px}.school{display:grid;justify-items:center;gap:5px;width:116px;min-height:95px;background:#fff;border:2px solid #d8d2d3;border-radius:5px;color:#181313;padding:8px 4px;font-size:.78rem;font-weight:850}.school[hidden]{display:none}.school img{width:46px;height:46px;object-fit:contain}.school[aria-pressed=true]{border-color:var(--red);background:#fff0f3}.vote-control{text-align:center}.vote-control .button{margin-top:9px;min-width:165px}.notice{font-size:.84rem;color:#51494b;margin-top:8px}.status{font-weight:800;min-height:1.55em;margin-top:6px}.schedule{max-width:780px;margin:54px auto 0}.schedule h3{font-size:clamp(20px,4vw,32px)}.dates{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0 0}.dates div{border-top:4px solid var(--red);padding:8px 3px}.dates dt{font-weight:900}.dates dd{margin:0}.footer{background:#353535;padding:24px 0;font-size:.83rem;color:#f2efef}.footer a{display:inline-block;margin-top:6px}@media(max-width:570px){.hero{background-position:53% center}.step-list{grid-template-columns:repeat(2,minmax(0,1fr));max-width:420px}.step-list li{min-height:0}.step-list li:last-child{grid-column:1/-1;width:calc((100% - 14px)/2);justify-self:center}.school{width:calc((100% - 18px)/3)}.actions .button{padding-inline:13px}.chart figcaption{font-size:.83rem}}
-.portfolio-bar {
-  background: #171515;
-  border-bottom: 1px solid #ffffff38;
-}
-.portfolio-bar .wrap {
-  min-height: 54px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0 16px;
-}
-.portfolio-bar a {
-  display: inline-flex;
-  min-height: 44px;
-  align-items: center;
-  font-size: 14px;
-  text-underline-offset: 4px;
-}
-.portfolio-bar p {
-  color: #f7e5a9;
-  font-size: 12px;
-  padding-block: 5px;
-}
-@media (max-width: 570px) {
-  .coupon {
-    grid-template-columns: minmax(0, 1fr) minmax(100px, 42%);
-  }
-}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CRUNCHY ATTACK 랜딩페이지 | YEJI STUDIO</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #141414; color: #fff; font-family: system-ui, sans-serif; }
+    header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 4px 20px; max-width: 1600px; margin: auto; padding: 8px 20px; }
+    a { color: inherit; display: inline-flex; align-items: center; min-height: 44px; text-underline-offset: 4px; }
+    h1 { font-size: 14px; font-weight: 600; margin: 0; }
+    main { max-width: 1600px; margin: auto; }
+    img { display: block; width: 100%; height: auto; }
+    a:focus-visible { outline: 2px solid #ffcf00; outline-offset: 3px; }
+  </style>
 </head>
 <body>
-<div class="portfolio-bar">
-  <div class="wrap">
+  <header>
     <a href="index.html#crunch">작품 목록</a>
-    <p>CRUNCHY ATTACK · 포트폴리오 시안</p>
-  </div>
-</div>
-<header class="hero">
-  <div class="wrap">
-    <h1>지금 누르면 우리학교 이김!</h1>
-    <p class="clock">마감까지 02:13:21 <small>(예시)</small></p>
-    <div class="hero-action"><p>현재 1위 vs 2위 · 단 3% 차이</p><a class="button" href="#vote">지금 점수 올리기</a></div>
-  </div>
-</header>
-<main>
-<section class="pad" aria-labelledby="rank-title">
-  <div class="wrap">
-    <div class="intro"><p class="banner">현재 124,582명의 대학생이 우리 학교를 응원 중!</p><p>현재 실시간 화력 상황 · 가장 뜨거운 학교는 어디?<br><span class="gold">1위 한국대학교 (82%) · 트럭 도착 임박!</span></p></div>
-    <div class="rank-heading"><h2 id="rank-title">현재 화력 상황</h2><p>단 <span class="hot">3%</span> 차이<br>지금 참여하면 뒤집힘</p></div>
-    <div class="chart">
-      <figure><div class="plot"><div class="bar" style="--height:82%"><strong><span aria-hidden="true">★</span> 82%</strong></div></div><figcaption>01 서울대학교 <small>7,800점</small></figcaption></figure>
-      <figure><div class="plot"><div class="bar" style="--height:79%"><strong><span aria-hidden="true">★</span> 79%</strong></div></div><figcaption>02 연세대학교 <small>4,200점</small></figcaption></figure>
-      <figure><div class="plot"><div class="bar" style="--height:63%"><strong><span aria-hidden="true">✦</span> 63%</strong></div></div><figcaption>03 크런키대학교 <small>3,100점</small></figcaption></figure>
-    </div>
-    <p class="rank-call">단 <span class="hot">3%</span> 차이 · 지금 뒤집을 수 있음</p>
-    <div class="actions"><a class="button light" href="#vote">우리 학교 밀어주기</a><a class="button light" href="#vote">지금 점수 올리기</a><button class="button light" id="share" type="button">친구 불러서 역전하기</button></div>
-    <p id="share-status" class="status" role="status"></p>
-  </div>
-</section>
-<section class="benefits pad" aria-labelledby="benefits-title">
-  <div class="wrap">
-    <h2 id="benefits-title">Benefit</h2>
-    <h3>1등 학교 전원에게 쏘는 특별한 혜택!</h3>
-    <div class="perks"><span>크런키 트럭 현장 출동</span><b aria-hidden="true">+</b><span>현장 특별 굿즈 증정 (선착순)</span></div>
-    <div class="coupon"><div><h3>2~10등 혜택</h3><p>참여 학생 전원<br><strong>크런키 50% 할인 쿠폰 즉시 발급</strong></p></div><img src="crunchy/chocolate.webp" alt="크런키 초콜릿"></div>
-  </div>
-</section>
-<section class="steps pad" aria-labelledby="steps-title">
-  <div class="wrap">
-    <h2 id="steps-title">우리 학교 <span class="hot">크런키</span> 트럭 소환법</h2>
-    <ol class="step-list">
-      <li><span>STEP 1</span><b>학교 검색</b><img src="crunchy/step-search.webp" alt=""></li>
-      <li><span>STEP 2</span><b>응원하기<br>버튼 클릭</b><img src="crunchy/step-vote.webp" alt=""></li>
-      <li><span>STEP 3</span><b>친구에게 공유하고<br>점수 2배 얻기</b><img src="crunchy/step-share.webp" alt=""></li>
-    </ol>
-  </div>
-</section>
-<section class="vote pad" id="vote" aria-labelledby="vote-title">
-  <div class="wrap">
-    <h2 id="vote-title">우리 학교 이름을 검색하세요</h2>
-    <form class="search" id="vote-form">
-      <label for="school-name">학교 이름</label>
-      <input id="school-name" name="school" type="search" placeholder="예) 서울대학교" maxlength="60" required autocomplete="off">
-      <p class="schools-title" id="schools-title">최근 인기 학교 리스트</p>
-      <div class="schools" id="schools">
-        <button type="button" class="school" aria-pressed="false"><img src="crunchy/school-seoul.webp" alt="">서울대학교</button>
-        <button type="button" class="school" aria-pressed="false"><img src="crunchy/school-yonsei.webp" alt="">연세대학교</button>
-        <button type="button" class="school" aria-pressed="false"><img src="crunchy/school-kyunghee.webp" alt="">경희대학교</button>
-        <button type="button" class="school" aria-pressed="false"><img src="crunchy/school-hongik.webp" alt="">홍익대학교</button>
-        <button type="button" class="school" aria-pressed="false"><img src="crunchy/school-busan.webp" alt="">부산대학교</button>
-      </div>
-      <div class="vote-control"><p>우리 학교에 응원 한 표를 보내세요.</p><button class="button" type="submit">투표하기</button><p class="notice">시안 체험용입니다. 실제 투표나 순위에는 반영되지 않습니다.</p><p id="vote-status" class="status" role="status"></p></div>
-    </form>
-    <div class="schedule">
-      <h3><span class="hot">CRUNK</span> ATTACK EVENT 일정</h3>
-      <dl class="dates"><div><dt>투표 기간</dt><dd>4.7~4.25</dd></div><div><dt>결과 발표</dt><dd>4.28</dd></div><div><dt>트럭 출동</dt><dd>5월 첫째 주</dd></div></dl>
-    </div>
-  </div>
-</section>
-</main>
-<footer class="footer"><div class="wrap">
-  <p>본 이벤트는 대학생 한정입니다. 부정 투표 적발 시 해당 학교는 제외됩니다.</p>
-  <p>롯데웰푸드 주식회사 (LOTTE Wellfood) · 서울특별시 영등포구 양평로21길 10</p>
-  <p>Copyright © LOTTE Wellfood Co., Ltd. All Rights Reserved.</p>
-  <a href="https://www.lottefoodmall.com">롯데웰푸드 푸드몰</a>
-</div></footer>
-<script>
-const input = document.querySelector('#school-name');
-const schools = [...document.querySelectorAll('.school')];
-const title = document.querySelector('#schools-title');
-const voteStatus = document.querySelector('#vote-status');
-const shareStatus = document.querySelector('#share-status');
-const compact = name => name.trim().replace(/\s+/g, '');
-const schoolName = button => button.textContent.trim();
-const votes = new Map();
-
-function updateSchools() {
-  const query = compact(input.value);
-  const matches = schools.filter(button => {
-    const name = schoolName(button);
-    button.hidden = Boolean(query) && ![name, name.replace('대학교','대')].some(option => option.includes(query));
-    button.setAttribute('aria-pressed', String(query === name));
-    return !button.hidden;
-  });
-  title.textContent = !query ? '최근 인기 학교 리스트' : matches.length ? '검색 결과' : '목록에 없는 학교는 입력한 이름으로 응원할 수 있어요.';
-}
-
-input.addEventListener('input', () => {
-  input.setCustomValidity('');
-  voteStatus.textContent = '';
-  updateSchools();
-});
-
-for (const school of schools) {
-  school.addEventListener('click', () => {
-    input.value = schoolName(school);
-    input.dispatchEvent(new Event('input'));
-    input.focus();
-  });
-}
-
-document.querySelector('#vote-form').addEventListener('submit', event => {
-  event.preventDefault();
-  const name = input.value.trim().replace(/\s+/g, ' ');
-  if (!name) {
-    input.setCustomValidity('학교 이름을 입력해 주세요.');
-    input.reportValidity();
-    return;
-  }
-  const query = compact(name);
-  const match = schools.find(button => {
-    const option = schoolName(button);
-    return query === option || query === option.replace('대학교','대');
-  });
-  const label = match ? schoolName(match) : name;
-  const key = compact(label);
-  const count = (votes.get(key) || 0) + 1;
-  votes.set(key, count);
-  voteStatus.textContent = label + ' 응원 완료! 이번 화면에서 ' + count + '표를 보냈어요.';
-});
-
-document.querySelector('#share').addEventListener('click', async () => {
-  const name = input.value.trim() || '우리 학교';
-  const text = name + '에 크런키 트럭을 소환하자! 같이 응원해 줘.';
-  if (navigator.share) {
-    try {
-      await navigator.share({title:'크런키 트럭 응원', text});
-      shareStatus.textContent = '응원 문구를 공유했어요.';
-      return;
-    } catch (error) {
-      if (error.name === 'AbortError') return;
-    }
-  }
-  try {
-    await navigator.clipboard.writeText(text);
-    shareStatus.textContent = '응원 문구를 복사했어요.';
-  } catch {
-    shareStatus.textContent = text;
-  }
-});
-</script>
+    <h1>CRUNCHY ATTACK 랜딩페이지</h1>
+    <a href="crunchy/original-landing.jpg">크게 보기</a>
+  </header>
+  <main aria-label="크런키 랜딩페이지 원본 디자인">
+    <img src="crunchy/original-landing.jpg" alt="크런키 학교 응원 캠페인 랜딩페이지. 트럭 프로모션, 학교별 응원 순위, 참여 혜택, 참여 방법, 학교 검색과 이벤트 일정." width="1600" height="7644" fetchpriority="high">
+  </main>
 </body>
 </html>
