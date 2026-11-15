@@ -42,7 +42,7 @@
 }
 .about-intro h1 { margin-block: 18px; font-size: clamp(2rem, 5.35vw, 4.75rem); line-height: 1.14; }
 .about-intro-copy > :last-child { max-width: 35rem; color: #e2dee5; }
-.about-intro-copy > :last-child, .about-section-head > :last-child, .course-feature p, .about-activities dd, .about-project-copy p {
+.about-intro-copy > :last-child, .about-section-head > :last-child, .course-feature p, .about-education dd, .about-project-copy p {
   word-break: keep-all;
   overflow-wrap: anywhere;
 }
@@ -54,25 +54,28 @@
   padding: 7px 4px;
   border-bottom: 1px solid var(--about-line);
 }
-.about-jump a { display: inline-flex; align-items: center; min-height: 44px; gap: 8px; color: #d0b6f6; font-size: .75rem; font-weight: 650; }
-.about-jump span { color: var(--text); font-size: .875rem; }
-.about-jump a:hover span, .about-footer a:hover { color: var(--accent); }
+.about-jump a { display: inline-flex; align-items: center; min-height: 44px; color: var(--text); font-size: .875rem; font-weight: 650; }
+.about-jump a:hover, .about-footer a:hover { color: var(--accent); }
 
 .about-section { margin-top: var(--about-space); scroll-margin-top: 18px; }
 .about-section-head { margin-bottom: clamp(20px, 3vw, 36px); }
 .about-section h2 { margin-top: 8px; font-size: clamp(1.875rem, 4.2vw, 3.5rem); line-height: 1.18; }
 .about-section-head > p:not(.about-kicker) { margin-top: 12px; color: var(--about-tone); }
-.about-activities { margin: 0; border-top: 1px solid var(--about-line); }
-.about-activities > div {
+.about-education { margin: 0; border-top: 1px solid var(--about-line); }
+.about-education > div {
   display: grid;
   grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
   gap: 12px clamp(16px, 5vw, 60px);
   border-bottom: 1px solid var(--about-line);
   padding: clamp(16px, 2.5vw, 28px) 0;
 }
-.about-activities dt { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 650; line-height: 1.4; word-break: keep-all; overflow-wrap: anywhere; }
-.about-activities dt span { display: block; margin-bottom: 5px; font-size: .75rem; color: var(--accent); }
-.about-activities dd { margin: 0; color: var(--about-tone); }
+.about-education dt { font-size: clamp(1rem, 2vw, 1.25rem); font-weight: 650; line-height: 1.4; word-break: keep-all; overflow-wrap: anywhere; }
+.about-education dt span { display: block; margin-bottom: 5px; font-size: .8125rem; color: var(--accent); }
+.about-education dd { margin: 0; color: var(--about-tone); }
+.education-dates { color: var(--text); font-weight: 650; font-variant-numeric: tabular-nums; }
+.education-dates time { white-space: nowrap; }
+.education-hours { margin-top: 2px; font-size: .875rem; font-variant-numeric: tabular-nums; }
+.about-education dd p:last-child { margin-top: 7px; }
 
 .course-feature {
   display: flex;
@@ -123,7 +126,7 @@
   .about-intro { grid-template-columns: minmax(0, 1fr); gap: 6px; padding: 16px 19px 25px; }
   .about-mark { grid-row: 1; width: clamp(96px, 30vw, 154px); justify-self: start; }
   .about-intro h1 { margin-block: 11px 14px; }
-  .about-activities > div { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .about-education > div { grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .course-feature { flex-direction: column; align-items: flex-start; }
   .about-projects { grid-template-columns: minmax(0, 1fr); }
 }

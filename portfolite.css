@@ -276,6 +276,8 @@ body { font-size: 1rem; line-height: 1.6; }
 #candy .card-thumb img { object-position: center 64%; }
 #biff .card-thumb { background: #341815; }
 #biff .card-thumb img { object-fit: contain; }
+#milk-tea-cream-foam .card-thumb { background: #d0e5f5; }
+#milk-tea-cream-foam .card-thumb img { object-fit: contain; }
 .profile { background: #141414; color: var(--text); }
 .profile .label { color: var(--text); }
 .profile-intro-grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1fr); gap: clamp(28px, 6vw, 86px); }
@@ -311,8 +313,6 @@ body { font-size: 1rem; line-height: 1.6; }
 @media (min-width: 1000px) {
   .archive-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .archive-grid .small-card { grid-column: span 2; }
-  .archive-grid .small-card:nth-child(n + 4) { grid-column: span 3; }
-  .archive-grid .small-card:nth-child(n + 4) .card-thumb { aspect-ratio: 2.35; }
 }
 @media (max-width: 700px) {
   .navbar { position: relative; inset: auto; padding-inline: var(--pad); }
