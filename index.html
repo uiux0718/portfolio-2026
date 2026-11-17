@@ -15,6 +15,18 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="portfolite.css" />
     <link rel="stylesheet" href="portfolio-effects.css" />
+    <style>
+      .portfolio-group-title {
+        grid-column: 1 / -1;
+        margin: 0;
+        font-size: clamp(1rem, 2vw, 1.375rem);
+        line-height: 1.4;
+      }
+
+      .portfolio-group-title:not(:first-child) {
+        margin-top: clamp(12px, 2vw, 24px);
+      }
+    </style>
     <script src="portfolio-effects.js" defer></script>
     <script src="studio-model.js" defer></script>
   </head>
@@ -58,13 +70,14 @@
           </div>
 
           <div class="work-grid">
+
+            <h3 class="portfolio-group-title">앱·웹서비스</h3>
           <article class="work-item work-item--featured hover-jaksim">
             <a class="work-visual" href="jaksim_nongjang_case.html" aria-label="작심농장 케이스 스터디">
               <img src="uidesign2.png" alt="작심농장 앱 디자인" loading="lazy">
             </a>
             <div class="work-content-block">
               <div class="work-meta-block side-jaksim">
-                <span class="work-num">01</span>
                 <span class="work-cat">APP PROJECT</span>
               </div>
               <h3 class="work-title">작심농장 <span class="work-name-en">JAKSIM NONGJANG</span></h3>
@@ -75,59 +88,6 @@
               <div class="work-links-flex">
                 <a href="jaksim_nongjang_case.html" class="btn-link">READ CASE STUDY</a>
                 <a href="https://uiux0718.github.io/zagsim/" target="_blank" rel="noopener" class="btn-link">VIEW APP</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="work-item hover-ki">
-            <a class="work-visual type-cover ki-cover" href="https://uiux0718.github.io/redesign-project/" target="_blank" rel="noopener" aria-label="KI Entertainment 웹사이트">
-              <img src="ki-thumbnail.jpg" alt="KI 엔터테인먼트 리디자인 웹사이트 첫 화면" width="1440" height="900" loading="lazy">
-            </a>
-            <div class="work-meta-block side-ki">
-              <span class="work-num">02</span>
-              <span class="work-cat">WEBSITE REDESIGN PROJECT</span>
-            </div>
-            <div class="work-content-block">
-              <h3 class="work-title">KI ENTERTAINMENT</h3>
-              <p class="work-desc">
-                다크 테마와 반응형 구조를 중심으로 기존 사이트의 시각 흐름과 사용 경험을 개선한 웹 리디자인 프로젝트입니다.
-              </p>
-              <div class="work-tags">#Web_Design #Dark_Theme #Responsive_Web</div>
-              <div class="work-links-flex">
-                <a href="https://uiux0718.github.io/redesign-project/" target="_blank" rel="noopener" class="btn-link">VIEW SITE</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="work-item hover-mood">
-            <a class="work-visual type-cover mood-cover" href="https://onfcompany0718.cafe24.com/" target="_blank" rel="noopener" aria-label="무드바이트 웹사이트">
-              <img src="mood-thumbnail.jpg" alt="무드바이트 쇼핑몰 첫 화면" width="1440" height="900" loading="lazy">
-            </a>
-            <div class="work-meta-block side-mood">
-              <span class="work-num">03</span>
-              <span class="work-cat">E-COMMERCE</span>
-            </div>
-            <div class="work-content-block">
-              <h3 class="work-title">무드바이트 <span class="work-name-en">MOOD BITE</span></h3>
-              <p class="work-desc">
-               감정 기반 큐레이션과 브랜드 무드를 연결한 이커머스 프로젝트입니다.
-              </p>
-              <div class="work-tags">#Visual_Branding #Emotion_UX #Cafe24</div>
-              <div class="work-links-flex">
-                <a href="https://onfcompany0718.cafe24.com/" target="_blank" rel="noopener" class="btn-link">VIEW SITE</a>
-              </div>
-            </div>
-          </article>
-          <article class="work-item work-item--featured" id="ease-meal">
-            <a class="work-visual" href="https://ease-meal-knu.myselfopenthedoor.chatgpt.site" target="_blank" rel="noopener" aria-label="이즈밀 랜딩페이지">
-              <img src="ease-meal-hero.jpg" alt="이즈밀 바와 간편빵의 제품 패키지" loading="lazy">
-            </a>
-            <div class="work-content-block">
-              <div class="work-meta-block"><span class="work-cat">BRAND LANDING PAGE</span></div>
-              <h3 class="work-title">이즈밀 <span class="work-name-en">EASE MEAL</span></h3>
-              <p class="work-desc">바쁜 일상에 바로 꺼내 먹을 수 있는 이즈밀 바와 간편빵을 소개하는 랜딩페이지입니다. 제품 사진과 보관 정보를 한눈에 보여주고 사전 신청으로 이어지는 흐름을 설계했습니다.</p>
-              <div class="work-links-flex">
-                <a href="https://ease-meal-knu.myselfopenthedoor.chatgpt.site" target="_blank" rel="noopener" class="btn-link">랜딩페이지 보기</a>
               </div>
             </div>
           </article>
@@ -159,6 +119,59 @@
               </div>
             </div>
           </article>
+
+            <h3 class="portfolio-group-title">웹사이트·랜딩페이지</h3>
+          <article class="work-item hover-ki">
+            <a class="work-visual type-cover ki-cover" href="https://uiux0718.github.io/redesign-project/" target="_blank" rel="noopener" aria-label="KI Entertainment 웹사이트">
+              <img src="ki-thumbnail.jpg" alt="KI 엔터테인먼트 리디자인 웹사이트 첫 화면" width="1440" height="900" loading="lazy">
+            </a>
+            <div class="work-meta-block side-ki">
+              <span class="work-cat">WEBSITE REDESIGN PROJECT</span>
+            </div>
+            <div class="work-content-block">
+              <h3 class="work-title">KI ENTERTAINMENT</h3>
+              <p class="work-desc">
+                다크 테마와 반응형 구조를 중심으로 기존 사이트의 시각 흐름과 사용 경험을 개선한 웹 리디자인 프로젝트입니다.
+              </p>
+              <div class="work-tags">#Web_Design #Dark_Theme #Responsive_Web</div>
+              <div class="work-links-flex">
+                <a href="https://uiux0718.github.io/redesign-project/" target="_blank" rel="noopener" class="btn-link">VIEW SITE</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-item hover-mood">
+            <a class="work-visual type-cover mood-cover" href="https://onfcompany0718.cafe24.com/" target="_blank" rel="noopener" aria-label="무드바이트 웹사이트">
+              <img src="mood-thumbnail.jpg" alt="무드바이트 쇼핑몰 첫 화면" width="1440" height="900" loading="lazy">
+            </a>
+            <div class="work-meta-block side-mood">
+              <span class="work-cat">E-COMMERCE</span>
+            </div>
+            <div class="work-content-block">
+              <h3 class="work-title">무드바이트 <span class="work-name-en">MOOD BITE</span></h3>
+              <p class="work-desc">
+               감정 기반 큐레이션과 브랜드 무드를 연결한 이커머스 프로젝트입니다.
+              </p>
+              <div class="work-tags">#Visual_Branding #Emotion_UX #Cafe24</div>
+              <div class="work-links-flex">
+                <a href="https://onfcompany0718.cafe24.com/" target="_blank" rel="noopener" class="btn-link">VIEW SITE</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="work-item work-item--featured" id="ease-meal">
+            <a class="work-visual" href="https://ease-meal-knu.myselfopenthedoor.chatgpt.site" target="_blank" rel="noopener" aria-label="이즈밀 랜딩페이지">
+              <img src="ease-meal-hero.jpg" alt="이즈밀 바와 간편빵의 제품 패키지" loading="lazy">
+            </a>
+            <div class="work-content-block">
+              <div class="work-meta-block"><span class="work-cat">BRAND LANDING PAGE</span></div>
+              <h3 class="work-title">이즈밀 <span class="work-name-en">EASE MEAL</span></h3>
+              <p class="work-desc">바쁜 일상에 바로 꺼내 먹을 수 있는 이즈밀 바와 간편빵을 소개하는 랜딩페이지입니다. 제품 사진과 보관 정보를 한눈에 보여주고 사전 신청으로 이어지는 흐름을 설계했습니다.</p>
+              <div class="work-links-flex">
+                <a href="https://ease-meal-knu.myselfopenthedoor.chatgpt.site" target="_blank" rel="noopener" class="btn-link">랜딩페이지 보기</a>
+              </div>
+            </div>
+          </article>
           </div>
 
         </div>
@@ -169,8 +182,8 @@
           <h2 class="label archive-label" id="archive-title">VISUAL ARCHIVE</h2>
           <div class="archive-grid">
 
+            <h3 class="portfolio-group-title">웹·그래픽 디자인</h3>
             <a id="crunch" href="crunchy-attack.html" class="small-card">
-              <span class="work-num">04</span>
               <h3>CRUNCHY ATTACK</h3>
               <p class="work-cat">PROMOTION LANDING PAGE</p>
               <div class="card-thumb">
@@ -182,7 +195,6 @@
             </a>
 
             <a id="jewelry" href="IU.png" target="_blank" rel="noopener" class="small-card">
-              <span class="work-num">05</span>
               <h3>J.ESTINA JEWELRY</h3>
               <p class="work-cat">VISUAL CONTENT STRATEGY</p>
               <div class="card-thumb">
@@ -191,40 +203,6 @@
               <div class="strategy-summary">
                 왼쪽 모델에서 오른쪽 제품으로 이어지는 시선 흐름 설계
               </div>
-            </a>
-
-            <a id="tea" href="mango_peach.png" target="_blank" rel="noopener" class="small-card">
-              <span class="work-num">06</span>
-              <h3>MCCOY TEAS: Mango Black Tea</h3>
-              <p class="work-cat">CARD NEWS / BRANDING</p>
-              <div class="card-thumb">
-                <img src="mango_peach.png" alt="맥코이티" />
-              </div>
-              <div class="strategy-summary">
-                프리미엄 홍차 브랜드의 감성을 담아 패키지 중심으로 구성한 SNS 홍보 콘텐츠입니다.
-              </div>
-            </a>
-
-            <a id="candy" href="https://www.youtube.com/shorts/WjxwcVW4DOU" target="_blank" rel="noopener" class="small-card">
-              <span class="work-num">07</span>
-              <h3>MOOD BITE : LEMON CANDY</h3>
-              <p class="work-cat">Short-form Brand Film</p>
-              <div class="card-thumb">
-                <img src="lemon_candy_thumb.png" alt="레몬사탕" />
-              </div>
-              <div class="strategy-summary">
-                감정 기반 큐레이션 쇼핑몰 ‘무드바이트’의 레몬캔디 브랜드 숏폼 콘텐츠입니다. 경쾌한 리듬과 화사한 컬러를 활용해 기분 전환의 경험을 짧고 직관적으로 전달했습니다.
-              </div>
-            </a>
-
-            <a id="biff" href="biff-cardnews.html" class="small-card">
-              <span class="work-num">08</span>
-              <h3>부산국제영화제 카드뉴스</h3>
-              <p class="work-cat">CARD NEWS</p>
-              <div class="card-thumb">
-                <img src="biff/01.webp" alt="" loading="lazy">
-              </div>
-              <div class="strategy-summary">그린컴퓨터디자인학원 · 3인 팀 프로젝트 · Photoshop<br>담당 역할 · 기획·자료 조사 참여, 카드 디자인 아이디어 제안<br>카드뉴스 8장 보기</div>
             </a>
 
             <a id="milk-tea-cream-foam" href="milk-tea-cream-foam.html" class="small-card">
@@ -236,6 +214,38 @@
               <div class="strategy-summary">푸른 색감과 거품의 질감을 담은 제품 웹포스터</div>
             </a>
 
+            <h3 class="portfolio-group-title">카드뉴스</h3>
+            <a id="tea" href="mango_peach.png" target="_blank" rel="noopener" class="small-card">
+              <h3>MCCOY TEAS: Mango Black Tea</h3>
+              <p class="work-cat">CARD NEWS / BRANDING</p>
+              <div class="card-thumb">
+                <img src="mango_peach.png" alt="맥코이티" />
+              </div>
+              <div class="strategy-summary">
+                프리미엄 홍차 브랜드의 감성을 담아 패키지 중심으로 구성한 SNS 홍보 콘텐츠입니다.
+              </div>
+            </a>
+
+            <a id="biff" href="biff-cardnews.html" class="small-card">
+              <h3>부산국제영화제 카드뉴스</h3>
+              <p class="work-cat">CARD NEWS</p>
+              <div class="card-thumb">
+                <img src="biff/01.webp" alt="" loading="lazy">
+              </div>
+              <div class="strategy-summary">그린컴퓨터디자인학원 · 3인 팀 프로젝트 · Photoshop<br>담당 역할 · 기획·자료 조사 참여, 카드 디자인 아이디어 제안<br>카드뉴스 8장 보기</div>
+            </a>
+
+            <h3 class="portfolio-group-title">브랜드 영상</h3>
+            <a id="candy" href="https://www.youtube.com/shorts/WjxwcVW4DOU" target="_blank" rel="noopener" class="small-card">
+              <h3>MOOD BITE : LEMON CANDY</h3>
+              <p class="work-cat">Short-form Brand Film</p>
+              <div class="card-thumb">
+                <img src="lemon_candy_thumb.png" alt="레몬사탕" />
+              </div>
+              <div class="strategy-summary">
+                감정 기반 큐레이션 쇼핑몰 ‘무드바이트’의 레몬캔디 브랜드 숏폼 콘텐츠입니다. 경쾌한 리듬과 화사한 컬러를 활용해 기분 전환의 경험을 짧고 직관적으로 전달했습니다.
+              </div>
+            </a>
           </div>
         </div>
       </section>
