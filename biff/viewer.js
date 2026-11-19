@@ -13,7 +13,7 @@ function showCard(index) {
   cards.forEach((card, position) => { card.hidden = position !== current; });
   previous.setAttribute('aria-disabled', String(current === 0));
   next.setAttribute('aria-disabled', String(current === cards.length - 1));
-  status.textContent = `${current + 1} / ${cards.length}`;
+  status.textContent = cards[current].querySelector('figcaption').textContent;
 }
 
 previous.addEventListener('click', () => showCard(current - 1));
