@@ -1,264 +1,119 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>작심농장 Case Study</title>
-    <link
-      rel="stylesheet"
-      as="style"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
-    />
-    <style>
-      :root {
-        --primary: #7c6dff;
-        --primary-light: #f0edff;
-        --black: #1c1c1e;
-        --white: #ffffff;
-        --gray-bg: #f8f7f2;
-        --gray-text: #4a4a4a;
-        --border: #eeeeee;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family:
-          "Pretendard",
-          -apple-system,
-          sans-serif;
-        background-color: var(--gray-bg);
-        color: var(--black);
-        line-height: 1.7;
-        word-break: keep-all;
-      }
-
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 60px 24px;
-      }
-
-      .label {
-        color: var(--primary);
-        font-weight: 800;
-        font-size: 0.9rem;
-        letter-spacing: 0.1em;
-        margin-bottom: 12px;
-        display: block;
-      }
-
-      .card {
-        background: var(--white);
-        border-radius: 24px;
-        padding: 40px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-        margin-bottom: 40px;
-      }
-
-      h2 {
-        font-size: 1.8rem;
-        font-weight: 800;
-        margin-bottom: 20px;
-      }
-      h3 {
-        font-size: 1.3rem;
-        font-weight: 700;
-        margin-bottom: 10px;
-      }
-      p {
-        color: var(--gray-text);
-        margin-bottom: 15px;
-      }
-
-      /* --- USER FLOW (가로 스크롤로 선명하게) --- */
-      .flow-viewer {
-        width: 100%;
-        background: #fdfdfd;
-        border-radius: 16px;
-        border: 1px solid var(--border);
-        overflow-x: auto;
-        margin-top: 20px;
-        cursor: grab;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .flow-viewer img {
-        min-width: 1400px; /* 고해상도 유지를 위해 최소 너비 확보 */
-        width: 100%;
-        height: auto;
-        display: block;
-        image-rendering: -webkit-optimize-contrast;
-      }
-
-      /* --- UI DESIGN --- */
-      .ui-main-showcase {
-        margin-top: 40px;
-        text-align: center;
-      }
-      .ui-main-showcase img {
-        max-width: 100%;
-        border-radius: 20px;
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-      }
-
-      /* --- APP DEMO (영상 나란히 배치) --- */
-      .video-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* 가로로 2개 배치 */
-        gap: 24px;
-        margin-top: 20px;
-      }
-
-      .video-card {
-        background: var(--white);
-        border-radius: 24px;
-        padding: 30px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-        text-align: center;
-      }
-
-      .iphone-frame {
-        position: relative;
-        width: 100%;
-        padding-bottom: 177.78%; /* 9:16 비c율 */
-        background: #000;
-        border-radius: 30px;
-        overflow: hidden;
-        border: 8px solid #1c1c1e;
-        margin-top: 15px;
-      }
-
-      .iphone-frame iframe {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-      }
-
-      /* 반응형: 모바일에서는 다시 세로로 */
-      @media (max-width: 850px) {
-        .video-grid {
-          grid-template-columns: 1fr;
-        }
-        .container {
-          padding: 40px 16px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h1 style="font-size: 2.8rem; font-weight: 900; margin-bottom: 40px">
-          작심농장 Case Study
-        </h1>
-      </header>
-
-      <section>
-        <span class="label">01. PERSONA</span>
-        <div
-          class="card"
-          style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap"
-        >
-          <img
-            src="personna.png"
-            alt="Persona"
-            style="width: 300px; border-radius: 16px"
-          />
-          <div style="flex: 1; min-width: 300px">
-            <h2>의욕은 앞서지만<br />꾸준함이 어려운 취준생</h2>
-            <p>
-              <strong>Goal:</strong> 오늘 하루의 성공을 시각적으로 확인하며
-              자신감을 회복하고 싶음
-            </p>
-            <p>
-              <strong>Pain Point:</strong> 기록을 한 번이라도 놓치면 느껴지는
-              무력감 때문에 앱을 아예 삭제해버림
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <span class="label">02. USER FLOW</span>
-        <div class="card">
-          <h2>수평적이고 직관적인 서비스 구조</h2>
-          <p>
-            사용자가 느끼는 심리적 부채감을 최소화하기 위해 서비스 구조를
-            수평적으로 단순화했습니다.
-          </p>
-          <div class="flow-viewer">
-            <img src="user.png" alt="작심농장 User Flow" />
-          </div>
-          <p
-            style="
-              text-align: center;
-              font-size: 0.85rem;
-              color: #999;
-              margin-top: 12px;
-            "
-          >
-            좌우로 스크롤하여 상세 플로우를 확인하세요.
-          </p>
-        </div>
-      </section>
-
-      <section>
-        <span class="label">03. UI DESIGN</span>
-        <div class="card">
-          <h2>사용자 경험을 고려한 인터페이스</h2>
-
-          <div class="ui-main-showcase">
-            <h3>Entry Experience</h3>
-            <p>빠른 진입을 통해 초기 이탈을 방지하는 로그인 화면</p>
-            <img src="uidesign.png" alt="Entry UI" />
-          </div>
-
-          <div style="margin-top: 60px"></div>
-
-          <div class="ui-main-showcase">
-            <h3>Core Functionality</h3>
-            <p>메인 농장 상태 및 기록 관리 기능</p>
-            <img src="uidesign2.png" alt="Core UI" />
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <span class="label">04. APP DEMO</span>
-        <div class="video-grid">
-          <div class="video-card">
-            <h3>Short Promo Film</h3>
-            <p style="font-size: 0.9rem; color: #777">핵심 컨셉 홍보 영상</p>
-            <div class="iphone-frame">
-              <iframe
-                src="https://www.youtube.com/embed/HE7IURwIO5g"
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-
-          <div class="video-card">
-            <h3>App Flow Demo</h3>
-            <p style="font-size: 0.9rem; color: #777">전체 서비스 흐름 시연</p>
-            <div class="iphone-frame">
-              <iframe
-                src="https://www.youtube.com/embed/zMC7r1lb_RI"
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  </body>
+<head>
+  <meta name="robots" content="noindex, nofollow, noarchive">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>작심농장 · Case Study</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap">
+<style>
+:root {
+  color-scheme: light;
+  --canvas: #fff;
+  --foreground: #000;
+  --heading: #0c4129;
+  --brand: #13ab67;
+  --accent: #378060;
+  --muted: #e2e6e4;
+  --hairline: #d1d6d4;
+  --chip-text: #0e0e0f;
+  --radius: 4px;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--foreground);
+  font: 400 16px/1.7 Inter, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  word-break: keep-all;
+}
+main { width: min(1080px, 100%); margin-inline: auto; padding: 24px clamp(16px, 5vw, 48px) 64px; }
+a { color: var(--heading); text-underline-offset: 3px; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+nav { padding-bottom: 16px; border-bottom: 1px solid var(--hairline); }
+.control {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding-inline: 12px;
+  border-radius: var(--radius);
+  font: 400 14px/1.4 Inter, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+.secondary { padding-inline: 0; color: var(--accent); }
+.primary { margin-top: 24px; background: var(--brand); color: var(--foreground); text-decoration: none; }
+.primary:hover { text-decoration: underline; }
+.hero { padding-block: 48px; border-bottom: 1px solid var(--hairline); }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.tags span { padding: 4px 8px; border-radius: var(--radius); background: var(--muted); color: var(--chip-text); font-size: 13px; }
+h1, h2, h3, p { margin: 0; }
+h1, h2, h3 { color: var(--heading); font-weight: 600; }
+h1 { font-size: clamp(30px, 6vw, 38px); line-height: 1.2; margin-bottom: 16px; }
+h2 { font-size: clamp(22px, 4vw, 28px); line-height: 1.35; margin-bottom: 16px; }
+h3 { font-size: 18px; margin-bottom: 8px; }
+.hero p, .copy { max-width: 690px; }
+section { margin-top: 64px; }
+.grid { display: grid; gap: 16px; }
+.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.card { padding: 24px; border: 1px solid var(--hairline); border-radius: var(--radius); }
+.crop {
+  display: grid;
+  place-items: center;
+  min-height: 120px;
+  margin-bottom: 16px;
+  border-radius: var(--radius);
+  background: var(--muted);
+  font-size: 48px;
+}
+.status { border-left: 2px solid var(--accent); padding-left: 16px; }
+.videos { display: grid; gap: 8px; margin-top: 16px; }
+summary { cursor: pointer; color: var(--heading); font-weight: 600; }
+@media (max-width: 620px) {
+  .two, .three { grid-template-columns: 1fr; }
+  .hero { padding-block: 32px; }
+  section { margin-top: 48px; }
+  .card { padding: 16px; }
+}
+</style>
+</head>
+<body>
+<main>
+<nav aria-label="포트폴리오"><a class="control secondary" href="index.html">← 포트폴리오</a></nav>
+<header class="hero">
+<div class="tags"><span>개인 프로젝트</span><span>UX 기획</span><span>UI 디자인</span><span>웹 프로토타이핑</span></div>
+<h1>작심농장</h1>
+<p>실천을 기록하면 작물이 자랍니다. 습관을 이어 가면 꽃이 피고, 쉬었다 돌아오면 새잎이 돋습니다.</p>
+<a class="control primary" href="https://uiux0718.github.io/zagsim/">기존 배포 앱 보기 ↗</a>
+</header>
+<section aria-labelledby="problem">
+<h2 id="problem">기록이 끊겼을 때 다시 시작하기</h2>
+<p class="copy">독서, 공부, 운동처럼 꾸준함이 필요한 목표를 세워도 하루를 놓치면 다시 기록하기 어려워질 수 있습니다. 실천 여부를 체크하는 데서 끝나는 흐름에, 오늘의 행동이 어떤 변화를 만들었는지 바로 확인하는 피드백을 더했습니다.</p>
+</section>
+<section aria-labelledby="flow">
+<h2 id="flow">접속부터 기록 결과까지</h2>
+<div class="grid three">
+<div class="card"><h3>목표 체험</h3><p>독서, 공부, 걷기 중 목표를 고르면 예시 기록이 있는 농장이 열립니다.</p></div>
+<div class="card"><h3>나의 농장</h3><p>연속 실천 일수와 작물 상태를 확인하고, 오늘 실천을 마쳤다면 물을 주거나 다시 시작을 누릅니다.</p></div>
+<div class="card"><h3>기록 결과</h3><p>오늘 기록이 반영되면서 작물이 어떻게 달라졌는지 확인하고 농장으로 돌아갑니다.</p></div>
+</div>
+</section>
+<section aria-labelledby="interaction">
+<h2 id="interaction">성장 장면</h2>
+<div class="grid two">
+<article class="card"><div class="crop" aria-hidden="true">🌻</div><h3>습관 이어가기</h3><p>독서를 꾸준히 기록하면 해바라기 꽃잎이 펼쳐지고 빛이 퍼집니다.</p></article>
+<article class="card"><div class="crop" aria-hidden="true">🌱</div><h3>쉬었던 습관으로 복귀</h3><p>공부를 쉬었다가 다시 기록하면 시들었던 작물에 새잎이 돋습니다. 오늘 다시 해낸 행동을 결과 화면에서 확인할 수 있습니다.</p></article>
+</div>
+</section>
+<section aria-labelledby="prototype">
+<h2 id="prototype">프로토타입 구현</h2>
+<p class="copy status">새 체험은 HTML·CSS·JavaScript로 구현했습니다. 휴대폰에서는 농장과 버튼이 위아래로, 넓은 화면에서는 나란히 배치됩니다. 예시 기록으로 성장 장면을 바로 확인할 수 있고 새로고침하면 초기화됩니다. 상단 링크는 기존 배포 앱으로 연결됩니다.</p>
+</section>
+<section aria-labelledby="archive">
+<h2 id="archive">초기 디자인 자료</h2>
+<details class="card"><summary>초기 콘셉트 영상과 앱 흐름 보기</summary>
+<div class="videos"><a href="https://www.youtube.com/watch?v=HE7IURwIO5g">콘셉트 영상 ↗</a><a href="https://www.youtube.com/watch?v=zMC7r1lb_RI">초기 앱 흐름 시연 ↗</a></div>
+</details>
+</section>
+</main>
+</body>
 </html>
