@@ -12,7 +12,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-padding-top: 24px; font-size: clamp(112.5%, calc(.75rem + .5vw), 150%); }
+html { scroll-padding-top: 24px; font-size: clamp(112.5%, calc(.75rem + .5vw), 137.5%); }
 
 body {
   margin: 0;
@@ -20,7 +20,7 @@ body {
   color: var(--text);
   font-family: Pretendard, "Malgun Gothic", "Apple SD Gothic Neo", system-ui, sans-serif;
   font-size: 1rem;
-  line-height: 1.65;
+  line-height: 1.75;
   letter-spacing: -.012em;
 }
 
@@ -137,7 +137,7 @@ button, input, textarea { font: inherit; }
 }
 
 .hero h1 span { display: block; }
-.hero-summary { max-width: 43ch; margin-top: 20px; color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.15rem); word-break: keep-all; }
+.hero-summary { max-width: 48ch; margin-top: 24px; color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.15rem); line-height: 1.75; word-break: keep-all; text-wrap: pretty; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
 .action {
@@ -190,7 +190,7 @@ button, input, textarea { font: inherit; }
 .work-item, .small-card {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 18px;
   min-width: 0;
   padding: clamp(14px, 1.75vw, 22px);
   border: 1px solid var(--line);
@@ -208,16 +208,16 @@ button, input, textarea { font: inherit; }
   flex: 1;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 12px;
   min-width: 0;
 }
 
 .work-cat { color: var(--accent); font-size: .875rem; font-weight: 650; line-height: 1.55; }
 .work-title { font-size: clamp(1.45rem, 2.6vw, 2.15rem); line-height: 1.25; letter-spacing: -.03em; }
 .work-tags { max-width: 100%; color: var(--muted); font-size: .875rem; line-height: 1.6; overflow-wrap: anywhere; }
-.work-desc, .strategy-summary { color: var(--muted); line-height: 1.65; word-break: keep-all; }
+.work-desc, .strategy-summary { color: var(--muted); line-height: 1.75; letter-spacing: -.01em; word-break: keep-all; text-wrap: pretty; }
 .work-desc { max-width: 52ch; }
-.work-links-flex { display: flex; flex-wrap: wrap; gap: 0 16px; margin-top: auto; padding-top: 4px; }
+.work-links-flex { display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 0; padding-top: 8px; }
 
 .btn-link {
   display: inline-flex;
@@ -270,7 +270,7 @@ button, input, textarea { font: inherit; }
 #ujjuju .work-visual { background: radial-gradient(ellipse at 50% 70%, #464054, #292632 70%); }
 #ujjuju .work-visual img { object-fit: contain; padding: 10px; }
 
-.small-card h3 { font-size: clamp(1.2rem, 1.9vw, 1.55rem); line-height: 1.3; letter-spacing: -.027em; }
+.small-card h3 { font-size: clamp(1.2rem, 1.9vw, 1.55rem); line-height: 1.4; letter-spacing: -.02em; }
 .small-card .card-thumb { order: -1; margin-bottom: 4px; }
 #cheese-pleasure-banner .card-thumb { background: #fcf3dc; }
 #cheese-pleasure-banner .card-thumb img { object-fit: contain; }
@@ -464,6 +464,10 @@ html:has(.guestbook[open]) { overflow: hidden; }
   .profile-intro-grid, .profile-details, .contact-layout { grid-template-columns: minmax(0, 1fr); }
 }
 
+@media (max-width: 779px) {
+  .work-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
 @media (max-width: 620px) {
   html { font-size: 100%; }
   .nav-flex { align-items: flex-start; flex-direction: column; gap: 0; }
@@ -498,6 +502,7 @@ html:has(.guestbook[open]) { overflow: hidden; }
   line-height: 1.55;
 }
 .small-card .project-facts { margin-top: auto; }
+.work-content-block > .project-facts { margin-top: auto; padding-top: 16px; }
 .project-facts div { display: grid; grid-template-columns: clamp(4.2rem, 7vw, 5.1rem) minmax(0, 1fr); gap: 8px; }
 .project-facts dt { color: var(--accent); font-weight: 650; }
 .project-facts dd { margin: 0; overflow-wrap: anywhere; }
