@@ -4,10 +4,10 @@
   background: #090909;
   color: #f7f7f7;
 }
-html { font-size: 125%; }
+html { font-size: 137.5%; }
 body { margin: 0; line-height: 1.8; letter-spacing: -.01em; }
 @media (max-width: 620px) {
-  html { font-size: 112.5%; }
+  html { font-size: 125%; }
 }
 main {
   width: min(680px, calc(100% - 32px));
