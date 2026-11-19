@@ -12,7 +12,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { scroll-padding-top: 24px; font-size: clamp(125%, calc(.9rem + .55vw), 162.5%); }
+html { scroll-padding-top: 24px; font-size: clamp(137.5%, calc(1rem + .6vw), 175%); }
 
 body {
   margin: 0;
@@ -469,7 +469,7 @@ html:has(.guestbook[open]) { overflow: hidden; }
 }
 
 @media (max-width: 620px) {
-  html { font-size: 112.5%; }
+  html { font-size: 125%; }
   .nav-flex { align-items: flex-start; flex-direction: column; gap: 0; }
   .menu { width: 100%; justify-content: space-between; gap: 0 10px; }
   .menu a { justify-content: center; min-inline-size: 44px; font-size: 1rem; }

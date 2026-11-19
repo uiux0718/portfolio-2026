@@ -10,9 +10,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
     />
-    <link rel="stylesheet" href="portfolite.css?v=12" />
+    <link rel="stylesheet" href="portfolite.css?v=13" />
+    <link rel="stylesheet" href="studio-3d.css?v=2" />
     <script src="guestbook.js?v=2" defer></script>
-    <script src="portfolio-interactions.js" defer></script>
+    <script src="portfolio-interactions.js?v=2" defer></script>
+    <script type="module" src="studio-3d.js?v=2"></script>
   </head>
 
   <body id="top">
@@ -34,6 +36,10 @@
     <main>
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-art" aria-hidden="true"></div>
+        <div class="hero-sculpture" aria-hidden="true">
+          <div class="sculpture-fallback"></div>
+          <canvas id="studio-canvas"></canvas>
+        </div>
         <div class="hero-content">
           <p class="hero-byline">김예지 · Digital Experience Designer</p>
           <h1 id="hero-title"><span>논리로 흐름을 설계하고</span> <span>감각으로 경험을 완성하다</span></h1>
